@@ -26,8 +26,8 @@ export const fetchGitHubRepos = async (): Promise<Repo[]> => {
 
         // Check for repo-image.png
         try {
-          await axios.get(`https://api.github.com/repos/DemiInfinity/${repo.name}/repo-image.png`);
-          repo.image_url = `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/repo-image.png`;
+          await axios.get(`https://api.github.com/repos/DemiInfinity/${repo.name}/contents/repo-image.png`);
+          repo.image_url = `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/main/repo-image.png`;
         } catch (error) {
           // If the image doesn't exist, do nothing
         }

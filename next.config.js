@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: ['raw.githubusercontent.com'],
+    }, 
+};
   
   if (process.env.NODE_ENV === 'production') {
     nextConfig.basePath = "/gh-pages";

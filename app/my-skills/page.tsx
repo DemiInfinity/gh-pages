@@ -6,6 +6,7 @@ import { SkillData } from "@/constans";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { getBasePath } from "../utils/basePath";
+import styles from "./Page.module.css"; // Import the CSS module
 
 const Page: React.FC = () => {
   const basePath = getBasePath();
@@ -13,19 +14,17 @@ const Page: React.FC = () => {
   return (
     <div
       style={{ backgroundImage: `url(${basePath}/bg-2.jpg)` }}
-      className="flex h-screen w-screen items-center justify-center bg-cover bg-center"
+      className={styles.pageContainer}
     >
-      <div className="flex flex-col gap-20 max-w-[80%] text-center items-center">
-        <div className="flex flex-col items-center gap-4">
-          <h1 className="font-semibold text-white text-[50px]">
+      <div className={styles.contentContainer}>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>
             Skills{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              &{" "}
+            <span className={styles.gradientText}>
+              & Technologies
             </span>
-            Technologies
           </h1>
-          <p className="text-gray-400 text-[20px]">
+          <p className={styles.subtitle}>
             Using the latest tech this world has to offer
           </p>
         </div>
@@ -35,7 +34,7 @@ const Page: React.FC = () => {
           autoplay={{ delay: 0, disableOnInteraction: false }}
           speed={5000}
           modules={[Autoplay]}
-          className="max-w-[80%]"
+          className={styles.swiperContainer}
         >
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
@@ -58,7 +57,7 @@ const Page: React.FC = () => {
           }}
           speed={5000}
           modules={[Autoplay]}
-          className="max-w-[80%]"
+          className={styles.swiperContainer}
         >
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>

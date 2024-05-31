@@ -1,0 +1,71 @@
+/* Page.module.css */
+
+.pageContainer {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 80%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .title {
+    font-weight: 600;
+    color: white;
+    font-size: 50px;
+  }
+  
+  .gradientText {
+    background-clip: text;
+    color: transparent;
+    background: linear-gradient(to right, #8e44ad, #00ffff);
+  }
+  
+  .subtitle {
+    color: #b0b0b0;
+    font-size: 20px;
+  }
+  
+  .swiperContainer {
+    max-width: 80%;
+  }
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 32px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    .swiperContainer {
+      max-width: 90%;
+    }
+  
+    .pageContainer {
+      padding: 20px; /* Add some padding to ensure the content doesn't touch the edges */
+    }
+  
+    .contentContainer {
+      gap: 10px; /* Reduce gap between elements */
+    }
+  }
+  

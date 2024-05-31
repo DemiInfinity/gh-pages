@@ -1,8 +1,11 @@
 /* styles/page.module.css */
+
 .repoGrid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 16px; /* Add gap between cards */
+  padding: 16px; /* Add padding around the grid */
 }
 
 .pagination {
@@ -30,12 +33,13 @@
 @media (max-width: 768px) {
   .repoGrid {
     flex-direction: column; /* Stack items vertically on mobile */
-    align-items: center; /* Center items */
-    padding: 10px; /* Add padding for better spacing */
+    align-items: center; /* Center items horizontally */
+    padding: 10px; /* Adjust padding for mobile */
+    gap: 10px; /* Reduce gap for mobile */
   }
 
   .pagination {
-    flex-direction: column; /* Stack pagination elements vertically */
+    flex-direction: row; /* Keep pagination elements in a row */
     margin-top: 10px; /* Reduce margin-top for mobile */
   }
 

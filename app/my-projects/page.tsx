@@ -1,12 +1,16 @@
 // app/my-projects/page.tsx
 "use client";
-
 import { useEffect, useState } from 'react';
 import { fetchCombinedRepos, CombinedRepo } from '../utils/repoService';
 import RepoCard from '../../components/RepoCard';
 import styles from './page.module.css';
+import getConfig from 'next/config';
 
 const MyProjects: React.FC = () => {
+  const config = getConfig();
+  const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};
+  const basePath = publicRuntimeConfig?.basePath || '';
+
   const [repos, setRepos] = useState<CombinedRepo[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const reposPerPage = 5;
@@ -30,12 +34,10 @@ const MyProjects: React.FC = () => {
     setCurrentPage(pageNumber);
   };
 
-  const isProduction = process.env.NODE_ENV === 'production';
-  const backgroundImage = isProduction ? '/gh-pages/Mountains.jpg' : '/Mountains.jpg';
 
   return (
     <div
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: `url(${basePath}//Mountains.jpg)` }}
       className="w-screen h-screen flex items-center justify-center bg-center bg-cover"
     >
       <div className="flex flex-col items-center">

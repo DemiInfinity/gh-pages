@@ -152,23 +152,35 @@
 
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
+  .mainContainer {
+    justify-content: flex-start; /* Ensure content starts from top */
+  }
+
+  .backgroundImage {
+    position:absolute; /* Ensure background image stays fixed */
+  }
+
   .textContainer {
     max-width: 90%;
     padding: 10px; /* Adjust padding for mobile */
   }
 
   .heading {
-    font-size: 36px; /* Adjust font size for mobile */
+    font-size: 28px; /* Adjust font size for mobile */
+  }
+
+  .gradientText {
+    font-size: 28px; /* Adjust font size for mobile */
   }
 
   .description {
-    font-size: 16px; /* Adjust font size for mobile */
+    font-size: 14px; /* Adjust font size for mobile */
   }
 
   .button {
     max-width: 100%;
-    font-size: 16px; /* Adjust font size for mobile */
-    padding: 10px; /* Adjust padding for mobile */
+    font-size: 14px; /* Adjust font size for mobile */
+    padding: 8px; /* Adjust padding for mobile */
   }
 
   .buttonGroup {

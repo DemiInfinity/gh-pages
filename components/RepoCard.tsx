@@ -18,13 +18,13 @@ const RepoCard: React.FC<RepoCardProps> = ({ repo }) => {
   const handleFlip = () => {
     setFlipped(!flipped);
   };
-
+  
   return (
     <div className={`${styles.card} ${flipped ? styles.flipped : ''}`} onClick={handleFlip}>
       <div className={`${styles.front} ${!repo.image_url ? styles.noImage : ''}`}>
         {repo.image_url ? (
           <Image
-            src={`${website}${repo.image_url}`}
+            src={`${repo.image_url}`}
             alt={`${repo.name} cover`}
             className={styles.coverImage}
             width={300}

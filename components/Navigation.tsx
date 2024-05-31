@@ -1,19 +1,20 @@
 "use client";
 
-import { NavLinks } from "@/constans";
+import { NavLinks } from "@/constans"; // Ensure the correct path to your constants file
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import Transition from "./Transition";
+import Transition from "./Transition"; // Ensure the correct path to your Transition component
+import styles from './Navigation.module.css'; // Ensure the correct path to your CSS module
 
 const Navigation = () => {
-  const [isRouting, setisRouting] = useState(false);
+  const [isRouting, setIsRouting] = useState(false);
   const path = usePathname();
   const [prevPath, setPrevPath] = useState("/");
 
   useEffect(() => {
     if (prevPath !== path) {
-      setisRouting(true);
+      setIsRouting(true);
     }
   }, [path, prevPath]);
 
@@ -21,7 +22,7 @@ const Navigation = () => {
     if (isRouting) {
       setPrevPath(path);
       const timeout = setTimeout(() => {
-        setisRouting(false);
+        setIsRouting(false);
       }, 1200);
 
       return () => clearTimeout(timeout);
@@ -29,21 +30,20 @@ const Navigation = () => {
   }, [isRouting, path]);
 
   return (
-    <div
-      style={{ left: "20%" }}
-      className="absolute z-[50] -bottom-20 w-[50%] md:w-[12%] max-h-[150px] rounded-full flex justify-between items-center border bg-black border-white px-4 py-7"
-    >
+    <>
       {isRouting && <Transition />}
-      {NavLinks.map((nav) => (
-        <Link key={nav.name} href={nav.link} className="mb-16 pl-4 min-w-[20%]">
-          <nav.icon
-            className={`w-[24px] h-[24px] ${
-              path === nav.name ? "text-purple-800" : "text-white"
-            }`}
-          />
-        </Link>
-      ))}
-    </div>
+      <div className={styles.navContainer}>
+        {NavLinks.map((nav) => (
+          <Link key={nav.name} href={nav.link} className={styles.navLink}>
+            <nav.icon
+              className={`${styles.navIcon} ${
+                path === nav.name ? styles.activeIcon : "text-white"
+              }`}
+            />
+          </Link>
+        ))}
+      </div>
+    </>
   );
 };
 

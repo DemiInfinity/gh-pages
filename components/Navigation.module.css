@@ -1,0 +1,49 @@
+/* Navigation.module.css */
+.navContainer {
+    position: fixed;
+    bottom: 25px; /* Adjust this value to move it slightly off the bottom */
+    left: 50%; /* Center the navigation horizontally */
+    transform: translateX(-50%); /* Center alignment correction */
+    z-index: 50;
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Set a maximum width for better control */
+    height: auto;
+    padding: 15px 20px; /* Adjust padding for better spacing */
+    background-color: transparent; /* Deep Purple */
+    border: 3px solid #9068db; /* White */
+    border-radius: 25px; /* More pronounced rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for a modern look */
+    display: flex;
+    justify-content: space-around; /* Space out the nav items */
+    align-items: center;
+  }
+  
+  .navLink {
+    color: #FFFFFF; /* White */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navIcon {
+    width: 30px;
+    height: 30px;
+    color: inherit;
+  }
+  
+  .navLabel {
+    font-size: 12px; /* Add labels with small font size */
+  }
+  
+  .navLink:hover .navIcon {
+    color: #B19CD9; /* Light Gray */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .activeIcon {
+    color: #9068db; /* Light Purple */
+    transform: scale(1.2); /* Slightly larger to make it more prominent */
+  }
+  

@@ -46,7 +46,7 @@
   right: 10px;
   width: 40px;
   height: 40px;
-  background-color: #0070f3;
+  background-color: #9068db;
   color: white;
   border: none;
   border-radius: 50%;
@@ -59,7 +59,7 @@
 }
 
 .card .circleButton:hover {
-  background-color: #005bb5;
+  background-color: #B19CD9;
 }
 
 .card .front img {

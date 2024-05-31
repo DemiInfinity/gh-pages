@@ -1,0 +1,136 @@
+.mainContainer {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .backgroundImage {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .textContainer {
+    padding-left: 20px;
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10;
+    max-width: 750px;
+  }
+  
+  .textContainer.md\:pl-40 {
+    padding-left: 40px;
+  }
+  
+  .textContainer.md\:pb-20 {
+    padding-bottom: 20px;
+  }
+  
+  .heading {
+    font-size: 50px;
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  
+  .gradientText {
+    background: linear-gradient(to right, #8e44ad, #00ffff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .description {
+    color: #E0E0E0;
+    display: none;
+  }
+  
+  .description.md\:block {
+    display: block;
+  }
+  
+  .buttonGroup {
+    display: none;
+    flex-direction: row;
+    gap: 5px;
+  }
+  
+  .buttonGroup.md\:flex {
+    display: flex;
+  }
+  
+  .button {
+    border-radius: 20px;
+    position: relative;
+    max-width: 200px;
+    padding: 15px;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .button.bg-blue-500 {
+    background-color: #9068db;
+  }
+  
+  .button.bg-blue-500:hover {
+    background-color: #B19CD9;
+  }
+  
+  .button.bg-transparent {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+  }
+  
+  .button:hover .overlay {
+    opacity: 0.2;
+  }
+  
+  .overlay {
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    background-color: #FFFFFF;
+    inset: 0;
+    opacity: 0;
+  }
+  
+  .linkGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    z-index: 20;
+  }
+  
+  .linkGroup.md\:hidden {
+    display: none;
+  }
+  
+  .imageContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+  
+  .fullScreenImage {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+  }
+  
+  .topLeftImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }

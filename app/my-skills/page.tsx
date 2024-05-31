@@ -7,8 +7,6 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import getConfig from 'next/config';
 
-
-
 const Page: React.FC = () => {
     const config = getConfig();
     const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};

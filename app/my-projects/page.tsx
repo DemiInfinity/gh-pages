@@ -32,7 +32,7 @@ const MyProjects: React.FC = () => {
 
   return (
     <div
-      style={{ backgroundImage: "url(/gh-pages/public/Mountains.jpg)" }}
+      style={{ backgroundImage: "url(/gh-pages/Mountains.jpg)" }}
       className="w-screen h-screen flex items-center justify-center bg-center bg-cover"
     >
       <div className="flex flex-col items-center">

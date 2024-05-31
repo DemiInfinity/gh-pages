@@ -9,6 +9,9 @@ interface RepoCardProps {
   repo: CombinedRepo;
 }
 
+const isProduction = process.env.NODE_ENV === 'production';
+const website = isProduction ? '/gh-pages/' : '';
+
 const RepoCard: React.FC<RepoCardProps> = ({ repo }) => {
   const [flipped, setFlipped] = useState(false);
 
@@ -21,7 +24,7 @@ const RepoCard: React.FC<RepoCardProps> = ({ repo }) => {
       <div className={`${styles.front} ${!repo.image_url ? styles.noImage : ''}`}>
         {repo.image_url ? (
           <Image
-            src={repo.image_url}
+            src={`${website}${repo.image_url}`}
             alt={`${repo.name} cover`}
             className={styles.coverImage}
             width={300}

@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   description: "Explore the portfolio of Demi Taylor Nimmo, a highly skilled software developer with a strong background in computer science. Specializing in full-stack development, Tailwind CSS, and TypeScript, Demi creates robust and innovative solutions. Discover projects, skills, and the journey of a passionate developer dedicated to pushing the boundaries of technology.",
 };
 
-
 export default function RootLayout({
   children,
 }: {

@@ -3,6 +3,7 @@
 .pageContainer {
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -33,9 +34,9 @@
   }
   
   .gradientText {
-    background-clip: text;
-    color: transparent;
     background: linear-gradient(to right, #8e44ad, #00ffff);
+    -webkit-background-clip: text;
+    color: transparent;
   }
   
   .subtitle {
@@ -47,7 +48,12 @@
     max-width: 80%;
   }
   
+  /* Mobile-friendly adjustments */
   @media (max-width: 768px) {
+    .pageContainer {
+      padding: 20px;
+    }
+  
     .title {
       font-size: 32px;
     }
@@ -56,16 +62,12 @@
       font-size: 16px;
     }
   
+    .contentContainer {
+      gap: 10px;
+    }
+  
     .swiperContainer {
       max-width: 90%;
-    }
-  
-    .pageContainer {
-      padding: 20px; /* Add some padding to ensure the content doesn't touch the edges */
-    }
-  
-    .contentContainer {
-      gap: 10px; /* Reduce gap between elements */
     }
   }
   

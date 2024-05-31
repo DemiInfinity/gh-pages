@@ -55,39 +55,39 @@ export default function Home() {
         >
           My projects
         </Link>
-        <Link
+        {/* <Link
           href="/contact-me"
           className="button bg-transparent"
         >
           Contact me
-        </Link>
+        </Link> */}
       </div>
 
       <div className="imageContainer">
-        <Image
+        {/* <Image
           src={`${basePath}/horse.png`}
           alt="horse"
           height={300}
           width={300}
-          className="absolute right-55 top-40"
-        />
+          className="right-55 top-40"
+        /> */}
 
-        <Image
+        {/* <Image
           src={`${basePath}/cliff.webp`}
           alt="cliff"
           width={480}
           height={480}
-        />
+        /> */}
       </div>
 
       <div className="fullScreenImage">
-        <Image
+        {/* <Image
           src={`${basePath}/trees.webp`}
           alt="trees"
           width={2000}
           height={2000}
           className="w-full h-full"
-        />
+        /> */}
       </div>
       <Image
         src={`${basePath}/stars.png`}

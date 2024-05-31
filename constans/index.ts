@@ -1,5 +1,6 @@
 import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
 
+
 export const SkillData = [
   {
     name: "Html 5",

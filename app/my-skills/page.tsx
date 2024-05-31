@@ -6,7 +6,9 @@ import { SkillData } from "@/constans";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 
+
 const Page = () => {
+  const website = '/gh-pages/'
   return (
     <div
       style={{ backgroundImage: "url(/gh-pages/bg-2.jpg)" }}
@@ -37,7 +39,7 @@ const Page = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={skill.Image}
+                src={website+skill.Image}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}
@@ -60,7 +62,7 @@ const Page = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={skill.Image}
+                src={website+skill.Image}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}

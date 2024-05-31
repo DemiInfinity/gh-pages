@@ -40,7 +40,7 @@ const Page = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={stringBuilder(website,skill.Image).toString()}
+                src={skill.Image}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}
@@ -63,7 +63,7 @@ const Page = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={stringBuilder(website,skill.Image).toString()}
+                src={skill.Image}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}
@@ -74,12 +74,6 @@ const Page = () => {
       </div>
     </div>
   );
-};
-
-const stringBuilder =(baseURL:string ,image:string): String => {
-  const URL = (baseURL + image).toString();
-  console.log(URL); 
-  return URL;
 };
 
 export default Page;

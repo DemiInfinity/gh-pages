@@ -1,94 +1,78 @@
 import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
 
+const isProduction = process.env.NODE_ENV === 'production';
+const baseURL = isProduction ? '/gh-pages' : '';
 
 export const SkillData = [
   {
     name: "Html 5",
-    Image: "/html.png",
+    Image: `${baseURL}/html.png`,
     width: 80,
     height: 80,
   },
   {
     name: "Css",
-    Image: "/css.png",
+    Image: `${baseURL}/css.png`,
     width: 80,
     height: 80,
   },
   {
     name: "JavaScript",
-    Image: "/js.png",
+    Image: `${baseURL}/js.png`,
     width: 65,
     height: 65,
   },
   {
     name: "Tailwind Css",
-    Image: "/tailwind.png",
+    Image: `${baseURL}/tailwind.png`,
     width: 80,
     height: 80,
   },
   {
     name: "React",
-    Image: "/react.png",
+    Image: `${baseURL}/react.png`,
     width: 80,
     height: 80,
   },
   {
     name: "C-sharp",
-    Image: "/c-sharp.png",
+    Image: `${baseURL}/c-sharp.png`,
     width: 80,
     height: 80,
   },
   {
     name: "angular",
-    Image: "/angular.png",
+    Image: `${baseURL}/angular.png`,
     width: 80,
     height: 80,
   },
   {
     name: "ms SQL",
-    Image: "/sql-server.png",
+    Image: `${baseURL}/sql-server.png`,
     width: 80,
     height: 80,
   },
-  // {
-  //   name: "Redux",
-  //   Image: "/redux.png",
-  //   width: 80,
-  //   height: 80,
-  // },
   {
     name: "TypeScript",
-    Image: "/ts.png",
+    Image: `${baseURL}/ts.png`,
     width: 80,
     height: 80,
   },
   {
     name: "Next js 13",
-    Image: "/next.png",
+    Image: `${baseURL}/next.png`,
     width: 80,
     height: 80,
   },
-  // {
-  //   name: "Framer Motion",
-  //   Image: "/framer.png",
-  //   width: 80,
-  //   height: 80,
-  // },
-  // {
-  //   name: "Stripe Payment",
-  //   Image: "/stripe.webp",
-  //   width: 80,
-  //   height: 80,
-  // },
   {
     name: "Node js",
-    Image: "/node-js.png",
+    Image: `${baseURL}/node-js.png`,
     width: 80,
     height: 80,
   },
   {
     name: "Mongo db",
-    Image: "/mongodb.png",
+    Image: `${baseURL}/mongodb.png`,
     width: 40,
     height: 40,
   },

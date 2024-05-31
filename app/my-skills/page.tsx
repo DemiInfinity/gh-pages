@@ -5,12 +5,12 @@ import "swiper/css";
 import { SkillData } from "@/constans";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
-import { useRouter } from "next/router";
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
 
 const Page: React.FC = () => {
-  const router = useRouter();
-  const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = router.basePath || '';
+  const basePath = publicRuntimeConfig.basePath || '';
 
   return (
     <div

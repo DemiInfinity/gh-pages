@@ -9,9 +9,6 @@ interface RepoCardProps {
   repo: CombinedRepo;
 }
 
-const isProduction = process.env.NODE_ENV === 'production';
-const website = isProduction ? '/gh-pages/' : '';
-
 const RepoCard: React.FC<RepoCardProps> = ({ repo }) => {
   const [flipped, setFlipped] = useState(false);
 

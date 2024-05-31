@@ -5,15 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Transition from "./Transition";
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
+const basePath = publicRuntimeConfig?.basePath || '';
 
 const Navigation = () => {
-  const [isRouting, setisRouting] = useState(false);
+  const [isRouting, setIsRouting] = useState(false);
   const path = usePathname();
   const [prevPath, setPrevPath] = useState("/");
 
   useEffect(() => {
     if (prevPath !== path) {
-      setisRouting(true);
+      setIsRouting(true);
     }
   }, [path, prevPath]);
 
@@ -21,7 +25,7 @@ const Navigation = () => {
     if (isRouting) {
       setPrevPath(path);
       const timeout = setTimeout(() => {
-        setisRouting(false);
+        setIsRouting(false);
       }, 1200);
 
       return () => clearTimeout(timeout);
@@ -35,7 +39,7 @@ const Navigation = () => {
     >
       {isRouting && <Transition />}
       {NavLinks.map((nav) => (
-        <Link key={nav.name} href={nav.link} className="mb-16 pl-4 min-w-[20%]">
+        <Link key={nav.name} href={`${basePath}${nav.link}`} className="mb-16 pl-4 min-w-[20%]">
           <nav.icon
             className={`w-[24px] h-[24px] ${
               path === nav.name ? "text-purple-800" : "text-white"

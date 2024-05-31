@@ -68,7 +68,7 @@
   max-width: 200px;
   padding: 15px;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
 }
@@ -83,7 +83,7 @@
 
 .button.bg-transparent {
   background-color: transparent;
-  border: 2.5px solid #FFFFFF;
+  border: 2.5px solid #ffffff;
 }
 
 .button.bg-transparent:hover {

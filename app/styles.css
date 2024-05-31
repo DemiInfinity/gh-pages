@@ -1,3 +1,5 @@
+/* Existing CSS */
+
 .mainContainer {
   width: 100vw;
   height: 100vh;
@@ -15,6 +17,7 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+  position: relative; /* Add this line */
 }
 
 .textContainer {
@@ -95,9 +98,9 @@
   border-radius: 20px;
   position: absolute;
   z-index: 1;
-  background-color: #FFFFFF;
+  background-color: #000000;
   inset: 0;
-  opacity: 0;
+  opacity: 40%;
 }
 
 .linkGroup {
@@ -134,4 +137,15 @@
   top: 0;
   left: 0;
   z-index: 10;
+}
+
+/* Add the new overlay class */
+.backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 5; /* Make sure it's below the textContainer but above the background image */
 }

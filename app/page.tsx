@@ -12,6 +12,7 @@ export default function Home() {
         className="backgroundImage"
         style={{ backgroundImage: `url(${basePath}/main-bg.webp)` }}
       >
+        <div className="overlay"></div>
         <div className="textContainer md:pl-40 md:pb-20">
           <h1 className="heading">
             Empowering Innovation with 
@@ -35,7 +36,6 @@ export default function Home() {
               href="/my-projects"
               className="button bg-transparent"
             >
-              <div className="overlay" />
               My projects
             </Link>
           </div>

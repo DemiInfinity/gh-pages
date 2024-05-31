@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import getConfig from 'next/config';
 
 export default function Home() {
-  const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = isProduction ? '/gh-pages' : '';
+    const config = getConfig();
+    const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};
+    const basePath = publicRuntimeConfig?.basePath || '';
 
   return (
     <main className="w-screen h-screen relative">

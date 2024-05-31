@@ -149,3 +149,35 @@
   background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
   z-index: 5; /* Make sure it's below the textContainer but above the background image */
 }
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .textContainer {
+    max-width: 90%;
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .heading {
+    font-size: 36px; /* Adjust font size for mobile */
+  }
+
+  .description {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .button {
+    max-width: 100%;
+    font-size: 16px; /* Adjust font size for mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 10px; /* Adjust gap for mobile */
+  }
+
+  .linkGroup {
+    flex-direction: column;
+    gap: 10px; /* Adjust gap for mobile */
+  }
+}

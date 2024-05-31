@@ -1,11 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import getConfig from 'next/config';
+import { getBasePath } from "./utils/basePath";
 
 export default function Home() {
-    const config = getConfig();
-    const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};
-    const basePath = publicRuntimeConfig?.basePath || '';
+  const basePath = getBasePath();
 
   return (
     <main className="w-screen h-screen relative">

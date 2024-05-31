@@ -2,12 +2,10 @@ import { Socials } from "@/constans";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import getConfig from 'next/config';
+import { getBasePath } from "@/app/utils/basePath";
 
 const Navbar = () => {
-  const config = getConfig();
-  const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};
-  const basePath = publicRuntimeConfig?.basePath || '';
+  const basePath = getBasePath();
 
   return (
     <div className="fixed top-0 z-[40] w-full h-[100px] bg-transparent flex justify-between items-center px-10 md:px-20">

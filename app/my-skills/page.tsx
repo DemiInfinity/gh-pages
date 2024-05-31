@@ -5,12 +5,10 @@ import "swiper/css";
 import { SkillData } from "@/constans";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
-import getConfig from 'next/config';
+import { getBasePath } from "../utils/basePath";
 
 const Page: React.FC = () => {
-    const config = getConfig();
-    const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};
-    const basePath = publicRuntimeConfig?.basePath || '';
+  const basePath = getBasePath();
 
   return (
     <div

@@ -4,12 +4,10 @@ import { useEffect, useState } from 'react';
 import { fetchCombinedRepos, CombinedRepo } from '../utils/repoService';
 import RepoCard from '../../components/RepoCard';
 import styles from './page.module.css';
-import getConfig from 'next/config';
+import { getBasePath } from '../utils/basePath';
 
 const MyProjects: React.FC = () => {
-  const config = getConfig();
-  const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};
-  const basePath = publicRuntimeConfig?.basePath || '';
+  const basePath = getBasePath();
 
   const [repos, setRepos] = useState<CombinedRepo[]>([]);
   const [currentPage, setCurrentPage] = useState(1);

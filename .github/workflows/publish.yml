@@ -24,7 +24,7 @@ jobs:
         uses: ./.github/workflows/setup-node
 
       - name: Create .env file 📝
-        run: echo "NEXT_PUBLIC_ENV=production" > .env
+        run: echo "NODE_ENV=production" > .env
 
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v4

@@ -7,10 +7,12 @@ import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import getConfig from 'next/config';
 
-const { publicRuntimeConfig } = getConfig();
+
 
 const Page: React.FC = () => {
-  const basePath = publicRuntimeConfig.basePath || '';
+    const config = getConfig();
+    const publicRuntimeConfig = config ? config.publicRuntimeConfig : {};
+    const basePath = publicRuntimeConfig?.basePath || '';
 
   return (
     <div

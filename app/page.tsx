@@ -60,19 +60,19 @@ export default function Home() {
 
       <div className="absolute bottom-0 right-0 z-[10]">
         <Image
-          src="/horse.png"
+          src="/gh-pages/horse.png"
           alt="horse"
           height={300}
           width={300}
           className="absolute right-55 top-40"
         />
 
-        <Image src="/cliff.webp" alt="cliff" width={480} height={480} />
+        <Image src="/gh-pages/cliff.webp" alt="cliff" width={480} height={480} />
       </div>
 
       <div className="absolute bottom-0 z-[5] w-full h-auto">
         <Image
-          src="/trees.webp"
+          src="/gh-pages/trees.webp"
           alt="trees"
           width={2000}
           height={2000}
@@ -80,7 +80,7 @@ export default function Home() {
         />
       </div>
       <Image
-        src="/stars.png"
+        src="/gh-pages/stars.png"
         alt="stars"
         height={300}
         width={300}

@@ -8,7 +8,7 @@ import { Autoplay } from "swiper/modules";
 
 const Page = () => {
   const isProduction = process.env.NODE_ENV === 'production';
-  const website = isProduction ? '/gh-pages/' : '';
+  const website = isProduction ? '/gh-pages' : '';
 
   return (
     <div

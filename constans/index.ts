@@ -102,7 +102,7 @@ export const Socials = [
   },
   {
     name: "X",
-    src: "/x.svg",
+    src: "/twitter.svg",
     link: 'https://x.com/DemiNimmo',
   },
   {

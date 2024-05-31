@@ -96,19 +96,29 @@ export const SkillData = [
 
 export const Socials = [
   {
+    name: "Discord",
+    src: "/discord.svg",
+    link: 'https://discordapp.com/users/223514824431108097',
+  },
+  {
+    name: "X",
+    src: "/x.svg",
+    link: 'https://x.com/DemiNimmo',
+  },
+  {
     name: "Instagram",
     src: "/instagram.svg",
-    link: '',
+    link: 'https://www.instagram.com/_demiinfinity/',
+  },
+  {
+    name: "Linkedin",
+    src: "/linkedin.svg",
+    link: 'https://www.linkedin.com/in/demi-taylor-nimmo-bb320b40/',
   },
   {
     name: "Facebook",
     src: "/facebook.svg",
-    link: '',
-  },
-  {
-    name: "Discord",
-    src: "/discord.svg",
-    link: '',
+    link: 'https://www.facebook.com/DemiTNimmo',
   },
 ];
 

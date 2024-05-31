@@ -5,14 +5,16 @@ import "swiper/css";
 import { SkillData } from "@/constans";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
+import { useRouter } from "next/router";
 
 const Page: React.FC = () => {
+  const router = useRouter();
   const isProduction = process.env.NODE_ENV === 'production';
-  const website = isProduction ? '/gh-pages' : '';
+  const basePath = router.basePath || '';
 
   return (
     <div
-      style={{ backgroundImage: `url(${website}/bg-2.jpg)` }}
+      style={{ backgroundImage: `url(${basePath}/bg-2.jpg)` }}
       className="flex h-screen w-screen items-center justify-center bg-cover bg-center"
     >
       <div className="flex flex-col gap-20 max-w-[80%] text-center items-center">
@@ -40,7 +42,7 @@ const Page: React.FC = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={`${website}${skill.Image}`}
+                src={`${basePath}${skill.Image}`}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}
@@ -63,7 +65,7 @@ const Page: React.FC = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={`${website}${skill.Image}`}
+                src={`${basePath}${skill.Image}`}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}

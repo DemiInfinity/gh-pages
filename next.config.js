@@ -1,13 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    basePath: "/gh-pages",
-    assetPrefix: "/gh-pages/",
-    output: "export",
-    reactStrictMode: true,
-    images: {
+
+const nextConfig = {};
+  
+  if (process.env.NODE_ENV === 'production') {
+    nextConfig.basePath = "/gh-pages";
+    nextConfig.assetPrefix = "/gh-pages/";
+    nextConfig.reactStrictMode = true;
+    nextConfig.output = "export";
+    nextConfig.images = {
       loader: 'akamai',
       path: '',
-    },
-  };
+    };
+  }
   
-  module.exports = nextConfig;  
+  module.exports = nextConfig;
+  

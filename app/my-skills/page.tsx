@@ -6,12 +6,13 @@ import { SkillData } from "@/constans";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 
-
 const Page = () => {
-  const website = '/gh-pages/'
+  const isProduction = process.env.NODE_ENV === 'production';
+  const website = isProduction ? '/gh-pages/' : '';
+
   return (
     <div
-      style={{ backgroundImage: "url(/gh-pages/bg-2.jpg)" }}
+      style={{ backgroundImage: `url(${website}/bg-2.jpg)` }}
       className="flex h-screen w-screen items-center justify-center bg-cover bg-center"
     >
       <div className="flex flex-col gap-20 max-w-[80%] text-center items-center">
@@ -25,7 +26,7 @@ const Page = () => {
             Technologies
           </h1>
           <p className="text-gray-400 text-[20px]">
-            Using the lactest tech this world has to offer
+            Using the latest tech this world has to offer
           </p>
         </div>
         <Swiper
@@ -39,7 +40,7 @@ const Page = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={website+skill.Image}
+                src={`${website}${skill.Image}`}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}
@@ -62,7 +63,7 @@ const Page = () => {
           {SkillData.map((skill, index) => (
             <SwiperSlide key={index}>
               <Image
-                src={website+skill.Image}
+                src={`${website}${skill.Image}`}
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}

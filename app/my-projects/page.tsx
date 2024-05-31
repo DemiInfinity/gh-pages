@@ -30,9 +30,12 @@ const MyProjects: React.FC = () => {
     setCurrentPage(pageNumber);
   };
 
+  const isProduction = process.env.NODE_ENV === 'production';
+  const backgroundImage = isProduction ? '/gh-pages/Mountains.jpg' : '/Mountains.jpg';
+
   return (
     <div
-      style={{ backgroundImage: "url(/gh-pages/Mountains.jpg)" }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
       className="w-screen h-screen flex items-center justify-center bg-center bg-cover"
     >
       <div className="flex flex-col items-center">

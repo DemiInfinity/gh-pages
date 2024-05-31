@@ -25,3 +25,23 @@
 .dot.active {
   background-color: #B19CD9;
 }
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .repoGrid {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .pagination {
+    flex-direction: column; /* Stack pagination elements vertically */
+    margin-top: 10px; /* Reduce margin-top for mobile */
+  }
+
+  .dot {
+    height: 8px; /* Reduce dot size for mobile */
+    width: 8px; /* Reduce dot size for mobile */
+    margin: 0 3px; /* Reduce margin for mobile */
+  }
+}

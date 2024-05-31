@@ -1,3 +1,4 @@
+/* Existing CSS */
 .card {
   perspective: 1000px;
   width: 300px;
@@ -102,4 +103,40 @@
 
 .card.flipped .back {
   transform: rotateY(0deg);
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Use more width on mobile */
+    height: auto; /* Allow height to adjust based on content */
+    margin: 10px 0; /* Adjust margin for mobile */
+  }
+
+  .card > div {
+    padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .card .front h3 {
+    font-size: 1em; /* Adjust font size for mobile */
+  }
+
+  .card .circleButton {
+    width: 30px; /* Reduce button size for mobile */
+    height: 30px; /* Reduce button size for mobile */
+    font-size: 1.2em; /* Adjust font size for button icon */
+  }
+
+  .card .front img {
+    max-height: 80px; /* Adjust image size for mobile */
+  }
+
+  .card .front .icon {
+    font-size: 20px; /* Adjust icon size for mobile */
+  }
+
+  .card .back p {
+    margin: 3px 0; /* Adjust margin for mobile */
+    font-size: 0.9em; /* Adjust font size for mobile */
+  }
 }

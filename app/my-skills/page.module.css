@@ -1,73 +1,102 @@
 /* Page.module.css */
 
 .pageContainer {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensure the container handles overflow */
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute; /* Cover the entire container */
+  top: 0;
+  left: 0;
+  z-index: -2; /* Place behind overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay opacity as needed */
+  z-index: 1; /* Place behind content */
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 80%;
+  text-align: center;
+  align-items: center;
+  z-index: 2; /* Ensure content is above the background and overlay */
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.title {
+  font-weight: 600;
+  color: white;
+  font-size: 50px;
+}
+
+.gradientText {
+  background: linear-gradient(to right, #8e44ad, #00ffff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: #b0b0b0;
+  font-size: 20px;
+}
+
+.swiperContainer {
+  max-width: 80%;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 20px;
   }
-  
-  .contentContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 80%;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .titleContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-  
+
   .title {
-    font-weight: 600;
-    color: white;
-    font-size: 50px;
+    font-size: 32px;
   }
-  
-  .gradientText {
-    background: linear-gradient(to right, #8e44ad, #00ffff);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  
+
   .subtitle {
-    color: #b0b0b0;
-    font-size: 20px;
+    font-size: 16px;
   }
-  
+
+  .contentContainer {
+    gap: 10px;
+  }
+
   .swiperContainer {
-    max-width: 80%;
+    max-width: 90%;
   }
-  
-  /* Mobile-friendly adjustments */
-  @media (max-width: 768px) {
-    .pageContainer {
-      padding: 20px;
-    }
-  
-    .title {
-      font-size: 32px;
-    }
-  
-    .subtitle {
-      font-size: 16px;
-    }
-  
-    .contentContainer {
-      gap: 10px;
-    }
-  
-    .swiperContainer {
-      max-width: 90%;
-    }
+
+  .backgroundImage {
+    background-size: cover; /* Ensure the background image covers the whole container */
+    justify-content: center;
+    align-items: center;
   }
-  
+}

@@ -6,7 +6,7 @@ import { SkillData } from "@/constans";
 import Image from "next/image";
 import { Autoplay } from "swiper/modules";
 import { getBasePath } from "../utils/basePath";
-import styles from './Page.module.css';
+import styles from './page.module.css';
 
 
 const Page: React.FC = () => {

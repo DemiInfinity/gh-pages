@@ -15,6 +15,8 @@ const Page: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
+  const swiperCount = 6;
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -58,19 +60,10 @@ const Page: React.FC = () => {
               Using the latest tech this world has to offer
             </p>
           </div>
-          <div className={styles.switchContainer}>
-            <ToggleButton
-              elemId="toggle-all"
-              initialStatus={expanded ? 'active' : 'pending'}
-              onToggle={handleToggle}
-            />
-            <span>{expanded ? 'Show All' : 'Show Slider'}</span>
-          </div>
-          {!expanded ? (
             <Swiper
-              slidesPerView={isMobile ? 3 : 5}
+              slidesPerView={isMobile ? swiperCount-2 : swiperCount}
               loop={true}
-              autoplay={{ delay: 0, disableOnInteraction: false }}
+              autoplay={{ delay: 0, disableOnInteraction: true }}
               speed={5000}
               modules={[Autoplay]}
               className={styles.swiperContainer}
@@ -86,25 +79,6 @@ const Page: React.FC = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          ) : (
-            <div className={styles.gridContainer}>
-              {rows.map((row, rowIndex) => (
-                <div key={rowIndex} className={styles.gridRow}>
-                  {row.map((skill, colIndex) => (
-                    <div key={colIndex} className={styles.gridCell}>
-                      <Image
-                        src={`${basePath}${skill.Image}`}
-                        alt={skill.name}
-                        width={skill.width}
-                        height={skill.height}
-                        className={styles.gridImage}
-                      />
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </div>
     </div>

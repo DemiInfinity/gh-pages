@@ -1,12 +1,12 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center all elements */
+  justify-content: flex-start; /* Align content to the top */
   align-items: center;
   width: 100vw;
   min-height: 100vh; /* Ensure it takes up the full viewport height */
   position: relative;
-  overflow: auto; /* Allow scrolling if necessary */
+  overflow-y: auto; /* Enable vertical scrolling */
   padding-bottom: 20px;
   text-align: center;
 }
@@ -100,6 +100,8 @@
 @media (max-width: 768px) {
   .pageContainer {
     padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    min-height: auto; /* Allow the page to grow as needed */
   }
 
   .title {

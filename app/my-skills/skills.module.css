@@ -1,12 +1,12 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content at the top */
+  justify-content: flex-start;
   align-items: center;
   width: 100vw;
-  min-height: 100vh; /* Ensure it takes up the full viewport height */
+  min-height: 100vh; /* Full viewport height */
   position: relative;
-  overflow: hidden; /* Prevent the entire page from scrolling */
+  overflow: hidden; /* Prevent any scrolling on the page */
   padding-bottom: 20px;
   text-align: center;
 }
@@ -19,7 +19,7 @@
   min-height: 100vh; /* Full height background */
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: absolute; /* Keep behind the content */
   z-index: -2;
 }
 
@@ -36,7 +36,7 @@
 .contentContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Start content at the top */
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
   width: 100%;
@@ -44,7 +44,7 @@
   text-align: center;
   z-index: 2;
   padding: 20px;
-  /* Scrolling behavior handled in media queries for mobile */
+  overflow: hidden; /* Prevent scrolling on desktop */
 }
 
 .titleContainer {
@@ -57,19 +57,19 @@
 
 .title {
   font-weight: 600;
-  color: #ffffff; /* White text for readability on the image */
-  font-size: 3rem; /* Larger text for desktop */
+  color: #ffffff;
+  font-size: 3rem; /* Larger font size for desktop */
 }
 
 .gradientText {
-  background: linear-gradient(to right, #00ffff, #8e44ad); /* High contrast gradient */
+  background: linear-gradient(to right, #00ffff, #8e44ad);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .subtitle {
   color: #d3d3d3;
-  font-size: 1.5rem; /* Larger font size for desktop */
+  font-size: 1.5rem;
 }
 
 .swiperContainer {
@@ -80,7 +80,7 @@
 
 .aboutSection {
   width: 100%;
-  padding: 4rem 2rem; /* More padding for desktop */
+  padding: 4rem 2rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@
 }
 
 .aboutText {
-  font-size: 1.25rem; /* Larger font size for desktop */
+  font-size: 1.25rem;
   line-height: 1.8;
   color: #e0e0e0;
   text-align: center;
@@ -101,23 +101,24 @@
 @media (max-width: 768px) {
   .pageContainer {
     padding: 20px;
-    overflow-y: hidden; /* Prevent full page scrolling on mobile */
-    min-height: 100vh;
+    overflow-y: hidden; /* Prevent full page scrolling */
+    min-height: 100vh; /* Full viewport height on mobile */
   }
 
   .contentContainer {
     gap: 10px;
     overflow-y: auto; /* Enable scrolling for content on mobile */
-    max-height: 75vh; /* Limit the container height to allow scrolling on mobile */
-    padding-bottom: 20px; /* Avoid content cutting off at the bottom */
+    max-height: 80vh; /* Allow enough space for scrolling */
+    padding-bottom: 20px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   .title {
-    font-size: 2rem; /* Smaller title for mobile */
+    font-size: 2rem; /* Smaller font for mobile */
   }
 
   .subtitle {
-    font-size: 1rem; /* Smaller subtitle for mobile */
+    font-size: 1rem;
     color: #d3d3d3;
   }
 
@@ -130,7 +131,7 @@
     background-size: cover;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute; /* Ensure it's positioned behind everything */
   }
 
   .aboutSection {
@@ -140,7 +141,7 @@
   }
 
   .aboutText {
-    font-size: 1rem; /* Smaller font size for mobile */
+    font-size: 1rem;
     line-height: 1.6;
     color: #e0e0e0;
     text-align: center;

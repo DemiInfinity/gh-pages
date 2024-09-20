@@ -37,10 +37,21 @@ const Page: React.FC = () => {
 
   return (
     <div className={styles.pageContainer}>
-      <div
-        className={styles.backgroundImage}
-        style={{ backgroundImage: `url(${basePath}/bg-2.webp)` }}
-      >
+      {/* About Me Section */}
+      <div className={styles.aboutSection}>
+        <h1 className={styles.title}>
+          About <span className={styles.gradientText}>Me</span>
+        </h1>
+        <p className={styles.aboutText}>
+        As a passionate web developer, I have worked on a variety of projects, building everything from small websites to complex web applications. My expertise includes JavaScript, React, Next.js, Node.js, and cloud technologies like AWS and Azure. I am dedicated to creating dynamic, scalable, and user-friendly solutions that align with business goals and deliver real value.
+        </p>
+        <p className={styles.aboutText}>
+        My journey has been driven by a commitment to learning and adapting to new technologies while maintaining a strong foundation in coding best practices. I am always looking for the next challenge, striving to stay at the forefront of web development trends and delivering cutting-edge solutions.
+        </p>
+      </div>
+
+      {/* Skills & Technologies Section */}
+      <div className={styles.backgroundImage} style={{ backgroundImage: `url(${basePath}/bg-2.webp)` }}>
         <div className={styles.overlay}></div>
         <div className={styles.contentContainer}>
           <div className={styles.titleContainer}>
@@ -54,6 +65,8 @@ const Page: React.FC = () => {
               Using the latest tech this world has to offer
             </p>
           </div>
+
+          {/* Swiper for Skills */}
           <Swiper
             slidesPerView={isMobile ? swiperCount - 2 : swiperCount}
             loop={true}

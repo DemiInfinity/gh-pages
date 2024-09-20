@@ -15,80 +15,27 @@ export default function Home() {
         <div className="overlay"></div>
         <div className="textContainer md:pl-40 md:pb-20">
           <h1 className="heading">
-            Empowering Innovation with 
-            <span className="gradientText">
+          Crafting Scalable and High-Performance 
+          <span className="gradientText">
               {" "}
-              Web & Desktop Development
+              Web Solutions
             </span>
           </h1>
           <p className="description md:block">
-            As a passionate developer specializing in both web and desktop applications, I turn complex problems into elegant solutions. My work emphasizes seamless functionality, intuitive design, and cutting-edge technology to deliver applications that exceed expectations. Explore my portfolio to see how I can bring your ideas to life.
+          With years of hands-on experience in full-stack web development, I specialize in creating scalable, high-performance web applications that solve real-world challenges. By integrating modern frameworks and best practices, I deliver seamless, user-friendly interfaces and robust back-end systems. Whether it's optimizing for speed, enhancing functionality, or driving innovation, my work consistently exceeds expectations. Explore my portfolio to see how I can bring your web development projects to life.
           </p>
-
-          <div className="buttonGroup md:flex">
-            <Link
-              href="/my-skills"
-              className="button bg-blue-500 hover:bg-blue-400"
-            >
-              Learn more
-            </Link>
-            <Link
-              href="/my-projects"
-              className="button bg-transparent"
-            >
-              My projects
-            </Link>
-          </div>
         </div>
       </div>
 
-      <div className="linkGroup md:hidden">
-        <Link
-          href="/my-skills"
-          className="button bg-blue-500"
-        >
-          Learn more
-        </Link>
-        <Link
-          href="/my-projects"
-          className="button bg-transparent"
-        >
-          My projects
-        </Link>
-        {/* <Link
-          href="/contact-me"
-          className="button bg-transparent"
-        >
-          Contact me
-        </Link> */}
-      </div>
-
+      
       <div className="imageContainer">
-        {/* <Image
-          src={`${basePath}/horse.png`}
-          alt="horse"
-          height={300}
-          width={300}
-          className="right-55 top-40"
-        /> */}
-
-        {/* <Image
-          src={`${basePath}/cliff.webp`}
-          alt="cliff"
-          width={480}
-          height={480}
-        /> */}
+        {/* Add images if necessary */}
       </div>
 
       <div className="fullScreenImage">
-        {/* <Image
-          src={`${basePath}/trees.webp`}
-          alt="trees"
-          width={2000}
-          height={2000}
-          className="w-full h-full"
-        /> */}
+        {/* Add full-screen image */}
       </div>
+
       <Image
         src={`${basePath}/stars.png`}
         alt="stars"

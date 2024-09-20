@@ -53,8 +53,9 @@ jobs:
           static_site_generator: next
 
       # Step 7: Build the Next.js app
+      # Since `next export` is deprecated, the new `output: 'export'` option will automatically export the static site
       - name: Build with Next.js 🏗️
-        run: npm run build && npm run export
+        run: npm run build
 
       # Step 8: Upload the build output to GitHub Pages artifact storage
       - name: Upload artifact 📡

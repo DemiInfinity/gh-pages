@@ -1,195 +1,31 @@
-/* Existing CSS */
-
-.mainContainer {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.backgroundImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative; /* Add this line */
-}
-
 .textContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjust gap for spacing */
+  gap: 20px;
   z-index: 10;
   max-width: 750px;
-  text-align: center; /* Center the text */
-  padding: 20px; /* Add padding for better spacing */
-}
-
-.heading {
-  font-size: 50px;
-  color: #FFFFFF;
-  font-weight: 600;
-}
-
-.gradientText {
-  background: linear-gradient(to right, #8e44ad, #00ffff);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.description {
-  color: #E0E0E0;
-  display: none;
-}
-
-.description.md\:block {
-  display: block;
+  text-align: center;
+  padding: 20px;
 }
 
 .buttonGroup {
   display: none;
   flex-direction: row;
-  gap: 20px; /* Adjust gap for spacing */
-  justify-content: center; /* Center the buttons */
+  gap: 20px;
+  justify-content: center;
 }
 
 .buttonGroup.md\:flex {
   display: flex;
 }
 
-.button {
-  border-radius: 20px;
-  position: relative;
-  max-width: 200px;
-  padding: 15px;
-  font-size: 18px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-}
-
-.button.bg-blue-500 {
-  background-color: #9068db;
-}
-
-.button.bg-blue-500:hover {
-  background-color: #B19CD9;
-}
-
-.button.bg-transparent {
-  background-color: transparent;
-  border: 2.5px solid #ffffff;
-}
-
-.button.bg-transparent:hover {
-  background-color: #B19CD9;
-}
-
-.button:hover .overlay {
-  opacity: 0.2;
-}
-
 .overlay {
-  border-radius: 20px;
-  position: absolute;
-  z-index: 1;
-  background-color: #000000;
-  inset: 0;
   opacity: 40%;
 }
 
-.linkGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  position: absolute;
-  bottom: 10px;
-  right: 5px;
-  z-index: 20;
-}
-
-.linkGroup.md\:hidden {
-  display: none;
-}
-
-.imageContainer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.fullScreenImage {
-  position: absolute;
-  bottom: 0;
-  z-index: 5;
-  width: 100%;
-  height: auto;
-}
-
-.topLeftImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-/* Add the new overlay class */
-.backgroundOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-  z-index: 5; /* Make sure it's below the textContainer but above the background image */
-}
-
-/* Mobile-friendly adjustments */
 @media (max-width: 768px) {
-  .mainContainer {
-    justify-content: flex-start; /* Ensure content starts from top */
-  }
-
-  .backgroundImage {
-    position:absolute; /* Ensure background image stays fixed */
-  }
-
   .textContainer {
     max-width: 90%;
-    padding: 10px; /* Adjust padding for mobile */
-  }
-
-  .heading {
-    font-size: 28px; /* Adjust font size for mobile */
-  }
-
-  .gradientText {
-    font-size: 28px; /* Adjust font size for mobile */
-  }
-
-  .description {
-    font-size: 14px; /* Adjust font size for mobile */
-  }
-
-  .button {
-    max-width: 100%;
-    font-size: 14px; /* Adjust font size for mobile */
-    padding: 8px; /* Adjust padding for mobile */
-  }
-
-  .buttonGroup {
-    flex-direction: column;
-    gap: 10px; /* Adjust gap for mobile */
-  }
-
-  .linkGroup {
-    flex-direction: column;
-    gap: 10px; /* Adjust gap for mobile */
+    padding: 10px;
   }
 }

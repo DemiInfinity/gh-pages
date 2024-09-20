@@ -8,7 +8,7 @@ import { Autoplay } from "swiper/modules";
 import ToggleButton from "../../components/ToggleButton"; // Adjust the import path as necessary
 
 import { getBasePath } from "../utils/basePath";
-import styles from './page.module.css';
+import styles from './skills.module.css';
 
 const Page: React.FC = () => {
   const basePath = getBasePath();
@@ -35,12 +35,6 @@ const Page: React.FC = () => {
     setExpanded(isActive);
   };
 
-  const numColumns = 5;
-  const rows = [];
-  for (let i = 0; i < SkillData.length; i += numColumns) {
-    rows.push(SkillData.slice(i, i + numColumns));
-  }
-
   return (
     <div className={styles.pageContainer}>
       <div
@@ -60,25 +54,25 @@ const Page: React.FC = () => {
               Using the latest tech this world has to offer
             </p>
           </div>
-            <Swiper
-              slidesPerView={isMobile ? swiperCount-2 : swiperCount}
-              loop={true}
-              autoplay={{ delay: 0, disableOnInteraction: true }}
-              speed={5000}
-              modules={[Autoplay]}
-              className={styles.swiperContainer}
-            >
-              {SkillData.map((skill, index) => (
-                <SwiperSlide key={index}>
-                  <Image
-                    src={`${basePath}${skill.Image}`}
-                    alt={skill.name}
-                    width={skill.width}
-                    height={skill.height}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <Swiper
+            slidesPerView={isMobile ? swiperCount - 2 : swiperCount}
+            loop={true}
+            autoplay={{ delay: 0, disableOnInteraction: true }}
+            speed={5000}
+            modules={[Autoplay]}
+            className={styles.swiperContainer}
+          >
+            {SkillData.map((skill, index) => (
+              <SwiperSlide key={index}>
+                <Image
+                  src={`${basePath}${skill.Image}`}
+                  alt={skill.name}
+                  width={skill.width}
+                  height={skill.height}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>

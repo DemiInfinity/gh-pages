@@ -1,13 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-body {
-  overflow: hidden;
-}
-
-/* Common styles */
-.pageContainer, .mainContainer {
+.pageContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +33,27 @@ body {
   z-index: 1;
 }
 
-.title, .heading {
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Ensure vertical centering */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.title {
   font-weight: 600;
   color: white;
   font-size: 2.5rem; /* Default size */
@@ -54,54 +65,41 @@ body {
   color: transparent;
 }
 
-.subtitle, .description {
+.subtitle {
   color: #b0b0b0;
   font-size: 1.25rem; /* Default size */
 }
 
-.button {
-  border-radius: 20px;
-  position: relative;
-  padding: 15px;
-  font-size: 1.125rem; /* Default size */
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-}
-
-.button.bg-blue-500 {
-  background-color: #9068db;
-}
-
-.button.bg-blue-500:hover {
-  background-color: #B19CD9;
-}
-
-.button.bg-transparent {
-  background-color: transparent;
-  border: 2.5px solid #ffffff;
-}
-
-.button.bg-transparent:hover {
-  background-color: #B19CD9;
+.swiperContainer {
+  width: 90%;
+  justify-content: center;
 }
 
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
-  .pageContainer, .mainContainer {
+  .pageContainer {
     padding: 20px;
   }
 
-  .title, .heading {
+  .title {
     font-size: 1.75rem; /* Adjusted size */
   }
 
-  .subtitle, .description {
+  .subtitle {
     font-size: 1rem; /* Adjusted size */
   }
 
-  .button {
-    font-size: 1rem; /* Adjusted size */
-    padding: 10px; /* Adjusted padding */
+  .contentContainer {
+    gap: 10px;
+  }
+
+  .swiperContainer {
+    max-width: 100%;
+  }
+
+  .backgroundImage {
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
   }
 }

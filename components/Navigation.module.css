@@ -1,25 +1,24 @@
-/* Navigation.module.css */
 .navContainer {
   position: fixed;
-  bottom: 25px; /* Adjust this value to move it slightly off the bottom */
-  left: 50%; /* Center the navigation horizontally */
-  transform: translateX(-50%); /* Center alignment correction */
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 50;
-  width: 80%; /* Adjust width as needed */
-  max-width: 600px; /* Set a maximum width for better control */
+  width: 80%;
+  max-width: 600px;
   height: auto;
-  padding: 15px 20px; /* Adjust padding for better spacing */
-  background-color: transparent; /* Deep Purple */
-  border: 3px solid #9068db; /* White */
-  border-radius: 25px; /* More pronounced rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for a modern look */
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 3px solid #9068db;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: space-around; /* Space out the nav items */
+  justify-content: space-around;
   align-items: center;
 }
 
 .navLink {
-  color: #FFFFFF; /* White */
+  color: #FFFFFF;
   transition: color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   display: flex;
@@ -34,34 +33,33 @@
 }
 
 .navLabel {
-  font-size: 12px; /* Add labels with small font size */
+  font-size: 12px;
 }
 
 .navLink:hover .navIcon {
-  color: #B19CD9; /* Light Gray */
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  color: #B19CD9;
+  transform: scale(1.1);
 }
 
 .activeIcon {
-  color: #9068db; /* Light Purple */
-  transform: scale(1.2); /* Slightly larger to make it more prominent */
+  color: #9068db;
+  transform: scale(1.2);
 }
 
-/* Mobile-friendly adjustments */
 @media (max-width: 768px) {
   .navContainer {
-    width: 95%; /* Use more width on mobile */
-    bottom: 15px; /* Adjust bottom position */
-    padding: 10px 15px; /* Adjust padding for mobile */
-    border-radius: 15px; /* Slightly less pronounced rounded corners */
+    width: 95%;
+    bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
   }
 
   .navIcon {
-    width: 25px; /* Reduce icon size for mobile */
-    height: 25px; /* Reduce icon size for mobile */
+    width: 25px;
+    height: 25px;
   }
 
   .navLabel {
-    font-size: 10px; /* Reduce font size for mobile */
+    font-size: 10px;
   }
 }

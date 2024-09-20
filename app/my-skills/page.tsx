@@ -36,24 +36,27 @@ const Page: React.FC = () => {
   };
 
   return (
+    <div className={styles.backgroundImage} style={{ backgroundImage: `url(${basePath}/bg-2.webp)` }}>
+      <div className={styles.overlay}></div>
+      <div className={styles.contentContainer}>
+
     <div className={styles.pageContainer}>
+
       {/* About Me Section */}
       <div className={styles.aboutSection}>
         <h1 className={styles.title}>
           About <span className={styles.gradientText}>Me</span>
         </h1>
         <p className={styles.aboutText}>
-        As a passionate web developer, I have worked on a variety of projects, building everything from small websites to complex web applications. My expertise includes JavaScript, React, Next.js, Node.js, and cloud technologies like AWS and Azure. I am dedicated to creating dynamic, scalable, and user-friendly solutions that align with business goals and deliver real value.
+            As a web developer with a strong focus on full-stack technologies, I have contributed to a range of projects, from developing user-friendly websites to creating more advanced web applications. My expertise includes working with modern frameworks like React, Next.js, and Node.js, while also integrating cloud services like AWS. I pride myself on delivering solutions that are both technically robust and aligned with the specific needs of each project.
         </p>
         <p className={styles.aboutText}>
-        My journey has been driven by a commitment to learning and adapting to new technologies while maintaining a strong foundation in coding best practices. I am always looking for the next challenge, striving to stay at the forefront of web development trends and delivering cutting-edge solutions.
+          Throughout my career, I have continuously honed my skills, adapting to new technologies and coding standards. My approach is centered around ensuring scalability and maintainability, while always pushing to stay ahead of the latest trends in web development. I am passionate about solving complex challenges and delivering innovative, high-quality results.
         </p>
       </div>
 
       {/* Skills & Technologies Section */}
-      <div className={styles.backgroundImage} style={{ backgroundImage: `url(${basePath}/bg-2.webp)` }}>
-        <div className={styles.overlay}></div>
-        <div className={styles.contentContainer}>
+        
           <div className={styles.titleContainer}>
             <h1 className={styles.title}>
               Skills{" "}

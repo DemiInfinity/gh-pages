@@ -1,22 +1,22 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Align content at the top */
   align-items: center;
   width: 100vw;
   min-height: 100vh; /* Ensure it takes up the full viewport height */
   position: relative;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow: hidden; /* Prevent the entire page from scrolling */
   padding-bottom: 20px;
   text-align: center;
 }
 
 .backgroundImage {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Vertically center elements */
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 100vh; /* Take full height of the viewport */
+  min-height: 100vh; /* Full height background */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -29,21 +29,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay to improve text readability */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   z-index: 1;
 }
 
 .contentContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center the content */
-  align-items: center; /* Horizontally center the content */
+  justify-content: flex-start; /* Start content at the top */
+  align-items: center;
   gap: 20px;
   width: 100%;
   max-width: 1200px;
   text-align: center;
   z-index: 2;
   padding: 20px;
+  /* Scrolling behavior handled in media queries for mobile */
 }
 
 .titleContainer {
@@ -51,13 +52,13 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  justify-content: center; /* Vertically center the title */
+  justify-content: center;
 }
 
 .title {
   font-weight: 600;
   color: #ffffff; /* White text for readability on the image */
-  font-size: 2.5rem;
+  font-size: 3rem; /* Larger text for desktop */
 }
 
 .gradientText {
@@ -67,32 +68,32 @@
 }
 
 .subtitle {
-  color: #d3d3d3; /* Light gray for better readability */
-  font-size: 1.25rem;
+  color: #d3d3d3;
+  font-size: 1.5rem; /* Larger font size for desktop */
 }
 
 .swiperContainer {
   width: 90%;
   justify-content: center;
-  color: #ffffff; /* White text for Swiper content */
+  color: #ffffff;
 }
 
 .aboutSection {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem; /* More padding for desktop */
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center the About Me content */
-  align-items: center; /* Horizontally center the content */
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
-  color: #ffffff; /* White text for the About Me section */
+  color: #ffffff;
 }
 
 .aboutText {
-  font-size: 1.125rem;
+  font-size: 1.25rem; /* Larger font size for desktop */
   line-height: 1.8;
-  color: #e0e0e0; /* Light gray for readability */
+  color: #e0e0e0;
   text-align: center;
 }
 
@@ -100,27 +101,29 @@
 @media (max-width: 768px) {
   .pageContainer {
     padding: 20px;
-    overflow-y: auto; /* Enable vertical scrolling */
-    min-height: auto; /* Allow the page to grow as needed */
-  }
-
-  .title {
-    font-size: 1.75rem;
-    color: #ffffff; /* White text on mobile */
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    color: #d3d3d3; /* Light gray subtitle */
+    overflow-y: hidden; /* Prevent full page scrolling on mobile */
+    min-height: 100vh;
   }
 
   .contentContainer {
     gap: 10px;
+    overflow-y: auto; /* Enable scrolling for content on mobile */
+    max-height: 75vh; /* Limit the container height to allow scrolling on mobile */
+    padding-bottom: 20px; /* Avoid content cutting off at the bottom */
+  }
+
+  .title {
+    font-size: 2rem; /* Smaller title for mobile */
+  }
+
+  .subtitle {
+    font-size: 1rem; /* Smaller subtitle for mobile */
+    color: #d3d3d3;
   }
 
   .swiperContainer {
     max-width: 100%;
-    color: #ffffff; /* Ensure Swiper text remains readable */
+    color: #ffffff;
   }
 
   .backgroundImage {
@@ -131,23 +134,23 @@
   }
 
   .aboutSection {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem; /* Less padding for mobile */
     text-align: center;
-    color: #ffffff; /* White text on mobile for About Me section */
+    color: #ffffff;
   }
 
   .aboutText {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: #e0e0e0; /* Light gray text for readability */
+    font-size: 1rem; /* Smaller font size for mobile */
+    line-height: 1.6;
+    color: #e0e0e0;
     text-align: center;
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #ffffff; /* White text */
+    color: #ffffff;
   }
 
   .gradientText {

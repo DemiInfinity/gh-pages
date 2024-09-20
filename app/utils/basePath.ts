@@ -5,6 +5,6 @@ export const getBasePath = (): string => {
     const { publicRuntimeConfig } = getConfig();
     return publicRuntimeConfig.basePath || '';
   } else {
-    return process.env.NODE_ENV === 'production' ? '/gh-pages' : '';
+    return '';
   }
 };

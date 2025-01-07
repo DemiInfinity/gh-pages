@@ -55,10 +55,17 @@ const Page: React.FC = () => {
         </p>
 
         <h1 className={styles.title}>
-          <span className={styles.gradientText}>Tenure</span>
+          Work <span className={styles.gradientText}>Experience</span>
         </h1>
         <p className={styles.aboutText}>
-          3 Years 7 Months
+          <div>
+            <div><b>Pass LTD: </b> 2 Months</div>
+            <div><span className={styles.gradientText}>(06/2024 - 08/2024)</span></div>
+          </div>
+          <div>
+            <div><b>3T Global: </b>3 Years 5 Months</div>
+            <div><span className={styles.gradientText}>(02/2021 - 06/2024)</span></div>
+          </div>
         </p>
 
       {/* Skills & Technologies Section */}

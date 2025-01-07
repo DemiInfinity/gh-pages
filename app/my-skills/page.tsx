@@ -67,18 +67,13 @@ const Page: React.FC = () => {
             <div><span className={styles.gradientText}>(02/2021 - 06/2024)</span></div>
           </div>
         </div>
-
-      {/* Skills & Technologies Section */}
-        <div className={styles.titleContainer}>
             <h1 className={styles.title}>
               Skills{" "}
               <span className={styles.gradientText}>
                 & Technologies
               </span>
             </h1>
-          </div>
-
-          {/* Swiper for Skills */}
+            
           <Swiper
             slidesPerView={isMobile ? swiperCount - 2 : swiperCount}
             loop={true}

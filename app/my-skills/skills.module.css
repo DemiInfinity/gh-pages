@@ -4,7 +4,6 @@
   justify-content: flex-start;
   align-items: center;
   width: 100vw; /* Full width */
-  min-height: 100vh; /* Full viewport height */
   position: relative;
   overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-bottom: 20px;
@@ -103,17 +102,12 @@
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
   .pageContainer {
-    padding: 20px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    min-height: 100vh; /* Full height on mobile */
+    overflow-y: auto;
+    height: 81vh;
   }
 
   .contentContainer {
-    gap: 10px;
-    overflow-y: auto; /* Enable vertical scrolling for content on mobile */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    max-height: 80vh; /* Limit height for scrolling */
-    padding-bottom: 20px;
+    margin: 100px 0;
   }
 
   .title {
@@ -138,7 +132,7 @@
   }
 
   .aboutSection {
-    padding: 0 1rem; /* Less padding for mobile */
+    margin-top: -90px;
     text-align: center;
     color: #ffffff;
   }

@@ -53,11 +53,16 @@ const Page: React.FC = () => {
         <p className={styles.aboutText}>
           Throughout my career, I have continuously honed my skills, adapting to new technologies and coding standards. My approach is centered around ensuring scalability and maintainability, while always pushing to stay ahead of the latest trends in web development. I am passionate about solving complex challenges and delivering innovative, high-quality results.
         </p>
-      </div>
+
+        <h1 className={styles.title}>
+          <span className={styles.gradientText}>Tenure</span>
+        </h1>
+        <p className={styles.aboutText}>
+          3 Years 7 Months
+        </p>
 
       {/* Skills & Technologies Section */}
-        
-          <div className={styles.titleContainer}>
+        <div className={styles.titleContainer}>
             <h1 className={styles.title}>
               Skills{" "}
               <span className={styles.gradientText}>
@@ -86,6 +91,7 @@ const Page: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+      </div>
         </div>
       </div>
     </div>

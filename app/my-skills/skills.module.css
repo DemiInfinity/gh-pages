@@ -42,7 +42,7 @@
   width: 100%; /* Ensure full width */
   text-align: center;
   z-index: 2;
-  padding: 20px;
+  padding: 10px;
   overflow: hidden; /* Prevent scrolling */
 }
 
@@ -79,8 +79,7 @@
 
 .aboutSection {
   width: 100%;
-  padding: 4rem 2rem;
-  margin-bottom: 2rem;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -98,6 +97,7 @@
   overflow-wrap: break-word; /* Break long words */
   white-space: normal; /* Ensure text wraps properly */
   max-width: 900px; /* Set a max-width to limit the text's width */
+  padding-bottom: 1.5rem;
 }
 
 /* Mobile-friendly adjustments */
@@ -139,7 +139,7 @@
   }
 
   .aboutSection {
-    padding: 2rem 1rem; /* Less padding for mobile */
+    padding: 0 1rem; /* Less padding for mobile */
     text-align: center;
     color: #ffffff;
   }

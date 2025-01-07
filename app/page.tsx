@@ -26,14 +26,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-
-      <Image
-        src={`${basePath}/stars.png`}
-        alt="stars"
-        height={300}
-        width={300}
-        className="topLeftImage"
-      />
     </main>
   );
 }

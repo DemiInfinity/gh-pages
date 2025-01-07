@@ -14,7 +14,11 @@ export interface Repo {
 
 export const fetchGitHubRepos = async (): Promise<Repo[]> => {
   try {
-    const response = await axios.get<Repo[]>('https://api.github.com/users/DemiInfinity/repos');
+    const response = await axios.get<Repo[]>('https://api.github.com/users/DemiInfinity/repos', {
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+      }
+    });
     const repos = response.data;
 
     // Fetch language data and check for the existence of repo-image.png

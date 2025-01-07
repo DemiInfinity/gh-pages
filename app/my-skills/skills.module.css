@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100vw;
+  width: 100vw; /* Full width */
   min-height: 100vh; /* Full viewport height */
   position: relative;
-  overflow: hidden; /* Prevent any scrolling on the page */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   padding-bottom: 20px;
   text-align: center;
 }
@@ -19,7 +19,7 @@
   min-height: 100vh; /* Full height background */
   background-size: cover;
   background-position: center;
-  position: absolute; /* Keep behind the content */
+  position: absolute;
   z-index: -2;
 }
 
@@ -39,12 +39,12 @@
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  width: 100%;
-  max-width: 1200px;
+  width: 100%; /* Ensure full width */
+  max-width: 1200px; /* Prevent content from going too wide */
   text-align: center;
   z-index: 2;
   padding: 20px;
-  overflow: hidden; /* Prevent scrolling on desktop */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .titleContainer {
@@ -58,7 +58,7 @@
 .title {
   font-weight: 600;
   color: #ffffff;
-  font-size: 3rem; /* Larger font size for desktop */
+  font-size: 3rem;
 }
 
 .gradientText {
@@ -95,22 +95,27 @@
   line-height: 1.8;
   color: #e0e0e0;
   text-align: center;
+  word-wrap: break-word; /* Ensure long words break properly */
+  overflow-wrap: break-word; /* Break long words */
+  white-space: normal; /* Ensure text wraps properly */
+  max-width: 600px; /* Set a max-width to limit the text's width */
 }
 
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
   .pageContainer {
     padding: 20px;
-    overflow-y: hidden; /* Prevent full page scrolling */
-    min-height: 100vh; /* Full viewport height on mobile */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* No full-page vertical scrolling */
+    min-height: 100vh; /* Full height on mobile */
   }
 
   .contentContainer {
     gap: 10px;
-    overflow-y: auto; /* Enable scrolling for content on mobile */
-    max-height: 80vh; /* Allow enough space for scrolling */
-    padding-bottom: 20px;
+    overflow-y: auto; /* Enable vertical scrolling for content on mobile */
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-height: 80vh; /* Limit height for scrolling */
+    padding-bottom: 20px;
   }
 
   .title {
@@ -145,6 +150,10 @@
     line-height: 1.6;
     color: #e0e0e0;
     text-align: center;
+    word-wrap: break-word; /* Ensure long words break properly */
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%; /* Ensure text fits within the screen on mobile */
   }
 
   .title {

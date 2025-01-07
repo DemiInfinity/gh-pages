@@ -4,12 +4,12 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 50;
-  width: 80%;
-  max-width: 600px;
+  width: 40%;
+  max-width: 400px;
   height: auto;
   padding: 15px 20px;
-  background-color: transparent;
-  border: 3px solid #9068db;
+  background-color: #333333;
+  border: 2px solid transparent;
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -49,6 +49,7 @@
 @media (max-width: 768px) {
   .navContainer {
     width: 95%;
+    max-width: 600px;
     bottom: 15px;
     padding: 10px 15px;
     border-radius: 15px;

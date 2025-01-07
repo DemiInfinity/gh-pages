@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Navigation from "@/components/Navigation";
-import 'dotenv/config'; // Automatically loads dotenv
-
 
 const inter = Inter({ subsets: ["latin"] });
 

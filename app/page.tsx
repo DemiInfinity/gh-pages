@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { getBasePath } from "./utils/basePath";
 import './styles.css'; // Import the new CSS file
-import 'dotenv/config'; // Automatically loads dotenv
 
 export default function Home() {
   const basePath = getBasePath();

@@ -2,7 +2,7 @@
   perspective: 1000px;
   width: 100%;
   max-width: 300px;
-  height: 350px; /* Ensures the card has a fixed height */
+  height: 300px; /* Ensures the card has a fixed height */
   margin: 16px;
   cursor: pointer;
   position: relative;
@@ -101,7 +101,7 @@
 @media (max-width: 768px) {
   .card {
     width: calc(100% - 32px); /* Ensure cards fit within mobile view */
-    height: 350px; /* Ensures the card has a fixed height */
+    height: 300px; /* Ensures the card has a fixed height */
     margin: 10px auto;
   }
 

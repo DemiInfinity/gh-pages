@@ -1,11 +1,13 @@
 .pageContainer {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  width: 100vw; /* Full width */
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .backgroundImage {
@@ -29,18 +31,28 @@
   z-index: -1; /* Place the overlay below the content */
 }
 
+.projectsSection {
+  width: 100%;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
 .contentContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  width: 100%;
-  max-width: 1200px;
+  width: 100%; /* Ensure full width */
   text-align: center;
-  z-index: 1; /* Ensure content is above the overlay */
-  padding: 20px;
-  color: white; /* Ensure text color is readable */
+  z-index: 2;
+  padding: 10px;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .repoGrid {
@@ -48,7 +60,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   padding: 16px;
-  width: 100%;
+  width: 50%;
 }
 
 .pagination {
@@ -66,6 +78,29 @@
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+}
+.title {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  text-align: center;
+  word-wrap: break-word; /* Ensure long words break properly */
+  overflow-wrap: break-word; /* Break long words */
+  white-space: normal; /* Ensure text wraps properly */
+  max-width: 900px; /* Set a max-width to limit the text's width */
+  padding-bottom: 1.5rem;
+}
+
+.gradientText {
+  background: linear-gradient(to right, #00ffff, #8e44ad);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .dot.active {

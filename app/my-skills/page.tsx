@@ -60,6 +60,7 @@ const Page: React.FC = () => {
         <h1 className={styles.title}>
           Work <span className={styles.gradientText}>Experience</span>
         </h1>
+
         <div className={styles.aboutText}>
           <div>
             <div><b>Pass LTD: </b> 2 Months</div>

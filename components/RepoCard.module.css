@@ -33,13 +33,13 @@
 }
 
 .card .front {
-  background-color: #2d2d2d;
+  background-color: #333333;
   color: white;
   text-align: center;
 }
 
 .card .back {
-  background-color: #343a40;
+  background-color: #333333;
   color: white;
   transform: rotateY(180deg);
 }
@@ -49,7 +49,7 @@
 }
 
 .card .front.noImage {
-  background-color: #2d2d2d;
+  background-color: #333333;
 }
 
 .card .front h3 {
@@ -63,8 +63,8 @@
   right: 10px;
   width: 40px;
   height: 40px;
-  background-color: #9068db;
-  color: white;
+  background-color: white;
+  color: #333333;
   border: none;
   border-radius: 50%;
   display: flex;

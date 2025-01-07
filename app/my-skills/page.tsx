@@ -64,9 +64,6 @@ const Page: React.FC = () => {
                 & Technologies
               </span>
             </h1>
-            <p className={styles.subtitle}>
-              Using the latest tech this world has to offer
-            </p>
           </div>
 
           {/* Swiper for Skills */}

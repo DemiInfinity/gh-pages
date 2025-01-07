@@ -40,7 +40,6 @@
   align-items: center;
   gap: 20px;
   width: 100%; /* Ensure full width */
-  max-width: 1200px; /* Prevent content from going too wide */
   text-align: center;
   z-index: 2;
   padding: 20px;
@@ -73,7 +72,7 @@
 }
 
 .swiperContainer {
-  width: 90%;
+  width: 1000px;
   justify-content: center;
   color: #ffffff;
 }
@@ -98,7 +97,7 @@
   word-wrap: break-word; /* Ensure long words break properly */
   overflow-wrap: break-word; /* Break long words */
   white-space: normal; /* Ensure text wraps properly */
-  max-width: 600px; /* Set a max-width to limit the text's width */
+  max-width: 900px; /* Set a max-width to limit the text's width */
 }
 
 /* Mobile-friendly adjustments */

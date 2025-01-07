@@ -42,9 +42,9 @@ jobs:
         if: steps.cache_dependencies.outputs.cache-hit != 'true'
         run: npm ci --legacy-peer-deps
 
-      # Step 5: Create environment variables file
-      - name: Create .env file 📝
-        run: echo "NODE_ENV=production" > .env
+      # Step 5: Create .env file with GitHub secret 📝
+      - name: Create .env file with GitHub Token
+        run: echo "NEXT_PUBLIC_GITHUB_TOKEN=${{ secrets.NEXT_PUBLIC_GITHUB_TOKEN }}" > .env
 
       # Step 6: Configure GitHub Pages for Next.js
       - name: Setup Pages ⚙️
@@ -53,9 +53,10 @@ jobs:
           static_site_generator: next
 
       # Step 7: Build the Next.js app
-      # Since `next export` is deprecated, the new `output: 'export'` option will automatically export the static site
       - name: Build with Next.js 🏗️
         run: npm run build
+        env:
+          NEXT_PUBLIC_GITHUB_TOKEN: ${{ secrets.NEXT_PUBLIC_GITHUB_TOKEN }}
 
       # Step 8: Upload the build output to GitHub Pages artifact storage
       - name: Upload artifact 📡
@@ -71,7 +72,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # Step 9: Publish to GitHub Pages
-      - name: Publish to GitHub Pages 🚀
+      # Step 9: Publish to GitHub Pages 🚀
+      - name: Publish to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -48,10 +48,13 @@ const Page: React.FC = () => {
           About <span className={styles.gradientText}>Me</span>
         </h1>
         <p className={styles.aboutText}>
-            As a web developer with a strong focus on full-stack technologies, I have contributed to a range of projects, from developing user-friendly websites to creating more advanced web applications. My expertise includes working with modern frameworks like React, Next.js, and Node.js, while also integrating cloud services like AWS. I pride myself on delivering solutions that are both technically robust and aligned with the specific needs of each project.
+          Hi, I’m Demi Taylor Nimmo, a passionate full-stack developer dedicated to crafting intuitive and impactful web experiences. With a keen eye for detail and a drive to solve complex problems, I specialize in building scalable and user-centric applications using modern technologies like React, Next.js, and serverless architectures.
         </p>
         <p className={styles.aboutText}>
-          Throughout my career, I have continuously honed my skills, adapting to new technologies and coding standards. My approach is centered around ensuring scalability and maintainability, while always pushing to stay ahead of the latest trends in web development. I am passionate about solving complex challenges and delivering innovative, high-quality results.
+          Over the years, I’ve honed my skills in creating seamless front-end designs and robust back-end solutions, ensuring every project not only functions beautifully but also tells a story. I believe in the power of clean code, thoughtful design, and collaboration to bring ideas to life.
+        </p>
+        <p className={styles.aboutText}>
+          When I’m not coding, you can find me exploring new tech trends, brainstorming creative concepts for LunaLore—my interactive VTuber platform—or simply enjoying the journey of continuous learning.
         </p>
 
         <h1 className={styles.title}>

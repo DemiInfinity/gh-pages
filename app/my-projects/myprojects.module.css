@@ -109,14 +109,42 @@
 
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
+  .pageContainer {
+    overflow-y: auto;
+    height: 81vh;
+  }
+  
   .contentContainer {
-    gap: 10px;
+    margin: 100px 0;
+  }
+
+  .projectsSection{
+    margin-top: -90px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .title {
+    font-size: 2rem; /* Smaller font for mobile */
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-align: center;
+    word-wrap: break-word; /* Ensure long words break properly */
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%; /* Ensure text fits within the screen on mobile */
   }
 
   .repoGrid {
     grid-template-columns: 1fr; /* Display one card at a time on mobile */
-    gap: 10px;
     justify-items: center; /* Center the cards within the grid */
+    align-items: center;
+    width: 100%;
+    margin-right: 10px;
   }
 
   .pagination {

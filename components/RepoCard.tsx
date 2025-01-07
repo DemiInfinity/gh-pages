@@ -19,12 +19,13 @@ const RepoCard: React.FC<RepoCardProps> = ({ repo }) => {
     <div className={`${styles.card} ${flipped ? styles.flipped : ''}`} onClick={handleFlip}>
       <div className={styles.cardInner}>
         <div className={`${styles.front} ${!repo.image_url ? styles.noImage : ''}`}>
+        <h3>{repo.name}</h3>
           {repo.image_url ? (
             <Image
               src={`${repo.image_url}`}
               alt={`${repo.name} cover`}
               className={styles.coverImage}
-              width={300}
+              width={200}
               height={200}
               layout="responsive"
             />
@@ -34,7 +35,6 @@ const RepoCard: React.FC<RepoCardProps> = ({ repo }) => {
           <div className={styles.icon}>
             {repo.source === 'github' ? <FaGithub /> : <FaBitbucket />}
           </div>
-          <h3>{repo.name}</h3>
           <div
             className={styles.circleButton}
             onClick={(e) => {

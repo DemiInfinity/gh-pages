@@ -20,7 +20,24 @@
 }
 
 .overlay {
-  opacity: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.textHome {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  text-align: center;
+  word-wrap: break-word; /* Ensure long words break properly */
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%; /* Ensure text fits within the screen on mobile */
 }
 
 @media (max-width: 768px) {

@@ -21,7 +21,7 @@ export default function Home() {
               Web Solutions
             </span>
           </h1>
-          <p className="description md:block">
+          <p className="textHome">
           With years of hands-on experience in full-stack web development, I specialize in creating scalable, high-performance web applications that solve real-world challenges. By integrating modern frameworks and best practices, I deliver seamless, user-friendly interfaces and robust back-end systems. Whether it's optimizing for speed, enhancing functionality, or driving innovation, my work consistently exceeds expectations. Explore my portfolio to see how I can bring your web development projects to life.
           </p>
         </div>

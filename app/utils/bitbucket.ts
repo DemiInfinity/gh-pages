@@ -1,5 +1,6 @@
 // utils/bitbucket.ts
 import axios from 'axios';
+import { getBasePath } from './basePath';
 
 export interface BitbucketRepo {
   uuid: string;
@@ -17,19 +18,16 @@ export interface BitbucketRepo {
 
 export const fetchBitbucketRepos = async (): Promise<BitbucketRepo[]> => {
   try {
+    const basePath = getBasePath(); // Gets the base path of the application
+
     const response = await axios.get('https://api.bitbucket.org/2.0/repositories/DemiTaylorCoder');
     const repos = response.data.values;
 
-    // Fetch image data if necessary and check for the existence of repo-image.png
-    const reposWithImages = await Promise.all(
-      repos.map(async (repo: BitbucketRepo) => {
-        // Note: Bitbucket does not provide a direct way to check for files, so we assume no image for simplicity
-        return {
-          ...repo,
-          image_url: null // Assuming no image URL
-        };
-      })
-    );
+    // Assign a local image URL for each repository
+    const reposWithImages = repos.map((repo: BitbucketRepo) => ({
+      ...repo,
+      image_url: `${basePath}/stack-1024.webp`, // Assuming the image is stored in the 'public/images' directory
+    }));
 
     return reposWithImages;
   } catch (error) {

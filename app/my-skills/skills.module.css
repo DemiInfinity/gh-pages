@@ -105,13 +105,12 @@
   .pageContainer {
     padding: 20px;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: hidden; /* No full-page vertical scrolling */
     min-height: 100vh; /* Full height on mobile */
   }
 
   .contentContainer {
     gap: 10px;
-    overflow-y: auto; /* Enable vertical scrolling for content on mobile */
+    overflow-y: visible; /* Enable vertical scrolling for content on mobile */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     max-height: 80vh; /* Limit height for scrolling */
     padding-bottom: 20px;

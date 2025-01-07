@@ -108,7 +108,7 @@ export const Socials = [
   {
     name: "Instagram",
     src: "/instagram.svg",
-    link: 'https://www.instagram.com/_demiinfinity/',
+    link: 'https://www.instagram.com/demitaylorn/',
   },
   {
     name: "Linkedin",

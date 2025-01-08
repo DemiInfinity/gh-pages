@@ -103,9 +103,16 @@
   .textHome {
     font-size: 1rem; /* Adjust text size for mobile */
     padding: 0 10px; /* Add padding for better readability */
+    margin-top: -15px;
   }
 
   .textProjects {
     font-size: 1rem; /* Adjust text size for mobile */
+  }
+
+  .title,
+  .heading {
+    font-size: 1.75rem; /* Adjusted size */
+    margin-top: -15px;
   }
 }

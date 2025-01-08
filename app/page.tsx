@@ -25,40 +25,37 @@ export default function Home() {
             on building intuitive platforms that inspire and connect. Let’s turn
             ideas into impactful digital realities.
           </p>
-          {/* "Currently Working On" Section */}
-          {/* "Currently Working On" Section */}
-          <section className="currentProjectsContainer">
-            <h2 className="heading">
-              Currently <span className="gradientText">Working On</span>
-            </h2>
-            <div className="projectsGrid">
-              {/* Project 1 */}
-              <div className="projectCard">
-                <Link href="https://github.com/DemiInfinity/elementrix-ui">
-                  <Image
-                    src={`${basePath}/elementrix-logo.png`}
-                    alt="Elementrix-UI Logo"
-                    width={150}
-                    height={150}
-                    className="projectLogo"
-                  />
-                </Link>
-              </div>
 
-              {/* Project 2 */}
-              <div className="projectCard">
-                <Link href="https://github.com/DemiInfinity/lunalore-desktop">
-                  <Image
-                    src={`${basePath}/lunalore-logo.png`}
-                    alt="LunaLore Logo"
-                    width={150}
-                    height={150}
-                    className="projectLogo"
-                  />
-                </Link>
-              </div>
+          <h2 className="heading">
+            Active <span className="gradientText">Projects</span>
+          </h2>
+          <p className="textProjects">
+            I’m currently working on some exciting projects. If you're
+            interested in exploring more or gaining detailed insights, simply
+            head to the Projects page in the navigation bar below.
+          </p>
+
+          <div className="projectsGrid">
+            <div className="projectCard">
+              <Image
+                src={`${basePath}/elementrix-logo.png`}
+                alt="Elementrix-UI Logo"
+                width={150}
+                height={150}
+                className="projectLogo"
+              />
             </div>
-          </section>
+
+            <div className="projectCard">
+              <Image
+                src={`${basePath}/lunalore-logo.png`}
+                alt="LunaLore Logo"
+                width={150}
+                height={150}
+                className="projectLogo"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </main>

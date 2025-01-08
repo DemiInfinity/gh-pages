@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getBasePath } from "./utils/basePath";
-import './styles.css'; // Import the new CSS file
+import "./styles.css"; // Import the new CSS file
 
 export default function Home() {
   const basePath = getBasePath();
@@ -13,19 +13,54 @@ export default function Home() {
         style={{ backgroundImage: `url(${basePath}/main-bg.webp)` }}
       >
         <div className="overlay"></div>
-          <div className="textContainer md:pl-40 md:pb-20">
-            <h1 className="heading">
-              Crafting Digital Experiences with 
-              <span className="gradientText">
-                {" "}
-                Heart and Precision
-              </span>
-            </h1>
-            <p className="textHome">
-              I’m Demi Taylor Nimmo, a passionate full-stack developer dedicated to bringing creativity and functionality together. With expertise in modern web technologies and a focus on user-centric design, I thrive on building intuitive platforms that inspire and connect. Let’s turn ideas into impactful digital realities.
-            </p>
-          </div>
+        <div className="textContainer md:pl-40 md:pb-20">
+          <h1 className="heading">
+            Crafting Digital Experiences with
+            <span className="gradientText"> Heart and Precision</span>
+          </h1>
+          <p className="textHome">
+            I’m Demi Taylor Nimmo, a passionate full-stack developer dedicated
+            to bringing creativity and functionality together. With expertise in
+            modern web technologies and a focus on user-centric design, I thrive
+            on building intuitive platforms that inspire and connect. Let’s turn
+            ideas into impactful digital realities.
+          </p>
+          {/* "Currently Working On" Section */}
+          {/* "Currently Working On" Section */}
+          <section className="currentProjectsContainer">
+            <h2 className="heading">
+              Currently <span className="gradientText">Working On</span>
+            </h2>
+            <div className="projectsGrid">
+              {/* Project 1 */}
+              <div className="projectCard">
+                <Link href="https://github.com/DemiInfinity/elementrix-ui">
+                  <Image
+                    src={`${basePath}/elementrix-logo.png`}
+                    alt="Elementrix-UI Logo"
+                    width={150}
+                    height={150}
+                    className="projectLogo"
+                  />
+                </Link>
+              </div>
+
+              {/* Project 2 */}
+              <div className="projectCard">
+                <Link href="https://github.com/DemiInfinity/lunalore-desktop">
+                  <Image
+                    src={`${basePath}/lunalore-logo.png`}
+                    alt="LunaLore Logo"
+                    width={150}
+                    height={150}
+                    className="projectLogo"
+                  />
+                </Link>
+              </div>
+            </div>
+          </section>
         </div>
+      </div>
     </main>
   );
 }

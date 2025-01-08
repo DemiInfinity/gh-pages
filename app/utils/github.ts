@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export interface Repo {
   id: number;
@@ -13,17 +13,19 @@ export interface Repo {
 
 export const fetchGitHubRepos = async (): Promise<Repo[]> => {
   try {
-    const url = 'https://api.github.com/users/DemiInfinity/repos';
+    const url = "https://api.github.com/users/DemiInfinity/repos";
     const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN; // Use an environment variable for the token
 
     if (!token) {
-      throw new Error('GitHub token is missing. Please set GITHUB_TOKEN in your environment variables.');
+      throw new Error(
+        "GitHub token is missing. Please set GITHUB_TOKEN in your environment variables."
+      );
     }
 
     const response = await axios.get<Repo[]>(url, {
       headers: {
         Authorization: `Bearer ${token}`,
-        Accept: 'application/vnd.github.v3+json',
+        Accept: "application/vnd.github.v3+json",
       },
     });
 
@@ -37,7 +39,7 @@ export const fetchGitHubRepos = async (): Promise<Repo[]> => {
           const languagesResponse = await axios.get(repo.languages_url, {
             headers: {
               Authorization: `Bearer ${token}`,
-              Accept: 'application/vnd.github.v3+json',
+              Accept: "application/vnd.github.v3+json",
             },
           });
           const languages = Object.keys(languagesResponse.data);
@@ -49,7 +51,7 @@ export const fetchGitHubRepos = async (): Promise<Repo[]> => {
               {
                 headers: {
                   Authorization: `Bearer ${token}`,
-                  Accept: 'application/vnd.github.v3+json',
+                  Accept: "application/vnd.github.v3+json",
                 },
               }
             );
@@ -71,7 +73,7 @@ export const fetchGitHubRepos = async (): Promise<Repo[]> => {
 
     return reposWithDetails;
   } catch (error) {
-    console.error('Error fetching GitHub repos', error);
+    console.error("Error fetching GitHub repos", error);
     return [];
   }
 };

@@ -105,7 +105,7 @@
 }
 
 .dot.active {
-  background-color: #B19CD9;
+  background-color: #b19cd9;
 }
 
 /* Mobile-friendly adjustments */
@@ -114,12 +114,12 @@
     overflow-y: auto;
     height: 81vh;
   }
-  
+
   .contentContainer {
     margin: 100px 0;
   }
 
-  .projectsSection{
+  .projectsSection {
     margin-top: -90px;
     text-align: center;
     color: #ffffff;

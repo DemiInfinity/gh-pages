@@ -1,6 +1,6 @@
 // utils/bitbucket.ts
-import axios from 'axios';
-import { getBasePath } from './basePath';
+import axios from "axios";
+import { getBasePath } from "./basePath";
 
 export interface BitbucketRepo {
   uuid: string;
@@ -20,7 +20,9 @@ export const fetchBitbucketRepos = async (): Promise<BitbucketRepo[]> => {
   try {
     const basePath = getBasePath(); // Gets the base path of the application
 
-    const response = await axios.get('https://api.bitbucket.org/2.0/repositories/DemiTaylorCoder');
+    const response = await axios.get(
+      "https://api.bitbucket.org/2.0/repositories/DemiTaylorCoder"
+    );
     const repos = response.data.values;
 
     // Assign a local image URL for each repository
@@ -31,7 +33,7 @@ export const fetchBitbucketRepos = async (): Promise<BitbucketRepo[]> => {
 
     return reposWithImages;
   } catch (error) {
-    console.error('Error fetching Bitbucket repos:', error);
+    console.error("Error fetching Bitbucket repos:", error);
     return [];
   }
 };

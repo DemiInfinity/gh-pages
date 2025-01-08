@@ -1,6 +1,5 @@
 import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
 
-
 export const SkillData = [
   {
     name: "Html 5",
@@ -98,27 +97,27 @@ export const Socials = [
   {
     name: "Discord",
     src: "/discord.svg",
-    link: 'https://discordapp.com/users/223514824431108097',
+    link: "https://discordapp.com/users/223514824431108097",
   },
   {
     name: "X",
     src: "/twitter.svg",
-    link: 'https://x.com/DemiNimmo',
+    link: "https://x.com/DemiNimmo",
   },
   {
     name: "Instagram",
     src: "/instagram.svg",
-    link: 'https://www.instagram.com/demitaylorn/',
+    link: "https://www.instagram.com/demitaylorn/",
   },
   {
     name: "Linkedin",
     src: "/linkedin.svg",
-    link: 'https://www.linkedin.com/in/demi-taylor-nimmo-bb320b40/',
+    link: "https://www.linkedin.com/in/demi-taylor-nimmo-bb320b40/",
   },
   {
     name: "Facebook",
     src: "/facebook.svg",
-    link: 'https://www.facebook.com/DemiTNimmo',
+    link: "https://www.facebook.com/DemiTNimmo",
   },
 ];
 

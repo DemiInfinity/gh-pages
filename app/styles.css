@@ -45,3 +45,36 @@
     padding: 10px;
   }
 }
+
+.currentProjectsContainer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.currentProjectsHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.projectsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* Adds space between logos */
+  align-items: center;
+}
+
+.projectCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectLogo {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.projectLogo:hover {
+  transform: scale(1.1);
+}

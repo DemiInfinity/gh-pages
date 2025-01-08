@@ -18,7 +18,7 @@
 }
 
 .navLink {
-  color: #FFFFFF;
+  color: #ffffff;
   transition: color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   display: flex;
@@ -37,7 +37,7 @@
 }
 
 .navLink:hover .navIcon {
-  color: #B19CD9;
+  color: #b19cd9;
   transform: scale(1.1);
 }
 

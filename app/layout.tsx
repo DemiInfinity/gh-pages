@@ -7,8 +7,10 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Demi Taylor Nimmo - Professional Software Developer & Computer Scientist",
-  description: "Explore the portfolio of Demi Taylor Nimmo, a highly skilled software developer with a strong background in computer science. Specializing in full-stack development, Tailwind CSS, and TypeScript, Demi creates robust and innovative solutions. Discover projects, skills, and the journey of a passionate developer dedicated to pushing the boundaries of technology.",
+  title:
+    "Demi Taylor Nimmo - Full-Stack Developer | Software Engineer | Innovator",
+  description:
+    "Welcome to the portfolio of Demi Taylor Nimmo, a driven full-stack software developer and computer scientist with a passion for creating innovative digital solutions. Specializing in modern web technologies like TypeScript, React, and Tailwind CSS, Demi thrives on building intuitive, user-centric applications. Explore the projects, skills, and journey of a developer dedicated to pushing the boundaries of technology and making a lasting impact.",
 };
 
 export default function RootLayout({

@@ -39,9 +39,73 @@
   max-width: 100%; /* Ensure text fits within the screen on mobile */
 }
 
+.textProjects {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  text-align: center;
+  word-wrap: break-word; /* Ensure long words break properly */
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%; /* Ensure text fits within the screen on mobile */
+  margin-top: -15px;
+}
+
+.projectsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem; /* Adds space between logos */
+  max-width: 1000px;
+  margin-top: 10px;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping of the logos in smaller screens */
+}
+
+.projectCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%; /* Make sure each project takes up full width on small screens */
+  max-width: 250px; /* Limit max width of logos on smaller screens */
+  margin-bottom: 1rem; /* Add some space between rows of logos */
+}
+
+.projectLogo {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  width: 100%; /* Make sure logos scale with container width */
+  max-width: 150px; /* Maintain maximum width */
+}
+
+/* Media Query for smaller screens */
 @media (max-width: 768px) {
   .textContainer {
     max-width: 90%;
     padding: 10px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 15px;
+  }
+
+  .projectsGrid {
+    gap: 1rem; /* Reduce the gap between project logos */
+    margin-top: 5px;
+  }
+
+  .projectCard {
+    flex-basis: 50%; /* Ensure full-width for logos on mobile */
+    max-width: 100px; /* Ensure logos don’t take too much space */
+  }
+
+  .textHome {
+    font-size: 1rem; /* Adjust text size for mobile */
+    padding: 0 10px; /* Add padding for better readability */
+  }
+
+  .textProjects {
+    font-size: 1rem; /* Adjust text size for mobile */
   }
 }

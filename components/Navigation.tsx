@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Transition from "./Transition"; // Ensure the correct path to your Transition component
-import styles from './Navigation.module.css'; // Ensure the correct path to your CSS module
+import styles from "./Navigation.module.css"; // Ensure the correct path to your CSS module
 
 const Navigation = () => {
   const [isRouting, setIsRouting] = useState(false);

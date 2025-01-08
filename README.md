@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 **Demi Taylor Nimmo Portfolio Website**
 
-## Getting Started
+Welcome to my portfolio! This website showcases my work as a **Full-Stack Developer**, highlighting the projects I’ve built and technologies I love working with.
 
-First, run the development server:
+**Live Website:** [demitaylornimmo.com](https://demitaylornimmo.com/)  
+**Hosted On:** GitHub Pages
 
-```bash
+---
+
+## 🚀 **Features**
+
+- **Dynamic Project Showcase**: Displays my latest public GitHub repositories automatically.
+- **Responsive Design**: Optimized for all devices, ensuring a seamless user experience.
+- **Modern Tech Stack**: Built with performance, scalability, and best practices in mind.
+
+---
+
+## 🛠️ **Technologies Used**
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Programming Language**: TypeScript
+- **Version Control**: Git, GitHub
+- **Styling**: CSS Modules / TailwindCSS / Styled Components (specify which one you used)
+- **Hosting**: [GitHub Pages](https://pages.github.com/)
+
+---
+
+## 📚 **Setup Instructions**
+
+### **Requirements**
+- Node.js (version 16 or above)
+- npm or yarn package manager
+
+### **Steps**
+1. Clone this repository:
+  ```bash
+   git clone https://github.com/yourusername/portfolio-website.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd portfolio-website
+  ```
+3. Install dependencies:
+  ```bash
+npm install
+  ```
+4. Start the development server:
+  ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  ```
+5. Open your browser and navigate to:
+  ```bash
+  http://localhost:3000
+  ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Deploy to GitHub Pages**
+1. Build the project:
+  ```bash
+  npm run build
+  ```
+2. Export static files:
+  ```bash
+   npm run export
+   ```
+3. Copy the contents of the out directory to your gh-pages branch or relevant GitHub Pages configuration.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 **Planned Features**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Blog Integration**: Share insights about development and projects.
+- **Interactive Animations**: Enhance user engagement with dynamic visual effects.
 
-## Learn More
+## 🌟 **Contributing**
 
-To learn more about Next.js, take a look at the following resources:
+While this is a personal project, I’m always open to feedback!  
+Feel free to:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Raise an issue** for suggestions or bug reports.
+- **Connect with me** on [LinkedIn](https://www.linkedin.com/in/demi-taylor-nimmo-bb320b40/) (or another preferred platform).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🔗 **Live Website**
 
-## Deploy on Vercel
+Explore my portfolio here: [demitaylornimmo.com](https://demitaylornimmo.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 **License**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
+
+

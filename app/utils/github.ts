@@ -56,6 +56,8 @@ export const fetchGitHubRepos = async (): Promise<Repo[]> => {
               }
             );
             repo.image_url = `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/main/repo-image.png`;
+            if (repo.image_url === "")
+              `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/master/repo-image.png`;
           } catch (error) {
             // If the image doesn't exist, do nothing
           }

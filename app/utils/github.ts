@@ -55,11 +55,24 @@ export const fetchGitHubRepos = async (): Promise<Repo[]> => {
                 },
               }
             );
-            repo.image_url = `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/main/repo-image.png`;
-            if (repo.image_url === "")
-              `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/master/repo-image.png`;
+            repo.image_url = `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/master/repo-image.png`;
           } catch (error) {
-            // If the image doesn't exist, do nothing
+            // If not found on 'master', check 'main' branch
+            try {
+              await axios.get(
+                `https://api.github.com/repos/DemiInfinity/${repo.name}/contents/repo-image.png`,
+                {
+                  headers: {
+                    Authorization: `Bearer ${token}`,
+                    Accept: "application/vnd.github.v3+json",
+                  },
+                }
+              );
+              repo.image_url = `https://raw.githubusercontent.com/DemiInfinity/${repo.name}/main/repo-image.png`;
+            } catch (fallbackError) {
+              // If the image isn't found on either branch, leave it undefined
+              console.log(`No image found for ${repo.name}`);
+            }
           }
 
           return {

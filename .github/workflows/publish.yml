@@ -35,12 +35,12 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          key: node-modules-${{ hashFiles('yarn.lock') }}
 
-      # Step 4: Install dependencies
+      # Step 4: Install dependencies with Yarn
       - name: Install dependencies 🔧
         if: steps.cache_dependencies.outputs.cache-hit != 'true'
-        run: npm ci --legacy-peer-deps
+        run: yarn install --frozen-lockfile
 
       # Step 5: Create .env file with GitHub secret 📝
       - name: Create .env file with GitHub Token
@@ -52,9 +52,9 @@ jobs:
         with:
           static_site_generator: next
 
-      # Step 7: Build the Next.js app
+      # Step 7: Build the Next.js app using Yarn
       - name: Build with Next.js 🏗️
-        run: npm run build
+        run: yarn build
         env:
           NEXT_PUBLIC_GITHUB_TOKEN: ${{ secrets.NEXT_PUBLIC_GITHUB_TOKEN }}
 

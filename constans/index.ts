@@ -20,10 +20,10 @@ export const LanguagesData = [
     height: 65,
   },
   {
-    name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
+    name: "SCSS",
+    Image: "/scss.png",
+    width: 60,
+    height: 60,
   },
   {
     name: "C-sharp",
@@ -40,12 +40,6 @@ export const LanguagesData = [
 ];
 
 export const FrameworkData = [
-  {
-    name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
   {
     name: "angular",
     Image: "/angular.png",
@@ -75,6 +69,12 @@ export const FrameworkData = [
     Image: "/netCoreIcon.png",
     width: 70,
     height: 70,
+  },
+  {
+    name: "Vite",
+    Image: "/ViteIcon.png",
+    width: 80,
+    height: 80,
   },
 ];
 

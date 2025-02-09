@@ -120,37 +120,58 @@
   margin: 5px 0;
 }
 
-/* Mobile-friendly adjustments */
-@media (max-width: 768px) {
+/* Media Queries */
+
+@media (max-width: 1281px) { /* Example breakpoint */
   .card {
-    width: 200px; /* Ensure cards fit within mobile view */
-    height: 200px; /* Ensures the card has a fixed height */
+    max-width: 95%; /* Smaller card */
+    height: 250px;
+    margin: 10px; /* Adjust margins */
   }
 
-  .cardInner {
-    padding: 10px;
+  .card img {
+    width: 15%;
   }
 
-  .card .front h3 {
+  .card h3 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) { /* Example breakpoint for tablets and smaller */
+  .card img {
+    width: 50%;
+  }
+  
+  .card h3 {
     font-size: 1em;
+  }
+
+  .card .circleButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) { /* Example breakpoint for phones */
+  .card img {
+    width: 50%;
+  }
+  
+  .card h3 {
+    font-size: 0.9em;
   }
 
   .card .circleButton {
     width: 30px;
     height: 30px;
-    font-size: 1.2em;
+    font-size: 1em;
+    bottom: 5px;
+    right: 5px;
   }
 
-  .card .front img {
-    max-height: 80px;
-  }
-
-  .card .front .icon {
-    font-size: 20px;
-  }
-
-  .card .back p {
-    margin: 3px 0;
-    font-size: 0.9em;
+  .card .front .noImageBackground {
+    height: 80px; /* Adjust no-image background height */
   }
 }

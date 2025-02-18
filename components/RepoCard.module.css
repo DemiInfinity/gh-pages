@@ -47,6 +47,7 @@
   align-items: center;
   padding: 16px;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 .card .front {
@@ -124,23 +125,28 @@
 
 @media (max-width: 1281px) { /* Example breakpoint */
   .card {
-    max-width: 95%; /* Smaller card */
-    height: 250px;
+    max-width: 400px; /* Smaller card */
+    max-height: 35%;
     margin: 10px; /* Adjust margins */
   }
 
   .card img {
-    width: 15%;
+    max-width: 100px;
   }
 
   .card h3 {
     font-size: 1.1em;
   }
+
+  .card .back {
+    font-size: 0.8rem;
+  }
+  
 }
 
 @media (max-width: 768px) { /* Example breakpoint for tablets and smaller */
   .card img {
-    width: 50%;
+    max-width: 70px;
   }
   
   .card h3 {
@@ -155,10 +161,6 @@
 }
 
 @media (max-width: 480px) { /* Example breakpoint for phones */
-  .card img {
-    width: 50%;
-  }
-  
   .card h3 {
     font-size: 0.9em;
   }

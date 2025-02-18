@@ -1,0 +1,43 @@
+.navContainer {
+    position: relative;
+    width: auto;
+    height: 100%;
+    background-color: #333333;
+    display: flexbox;
+  }
+  
+  .navOpen {
+    transform: translateX(0); /* Show when open */
+  }
+  
+  .navLink {
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+    align-items: center;
+  }
+  
+  .navIcon {
+    width: 35px;
+    height: 35px;
+    color: inherit;
+  }
+  
+  .navLabel {
+    font-size: 12px;
+  }
+  
+  .navLink:hover .navIcon {
+    color: #b19cd9;
+    transform: scale(1.1);
+  }
+  
+  .activeIcon {
+    color: #9068db;
+    transform: scale(1.2);
+  }
+
+  

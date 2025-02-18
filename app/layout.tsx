@@ -22,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <header>
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
+      </header>
       <body className={inter.className}>
         <Navbar />
         <div className="background">

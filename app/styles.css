@@ -62,7 +62,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-basis: 100%; /* Make sure each project takes up full width on small screens */
+  width: 100%;
   max-width: 250px; /* Limit max width of logos on smaller screens */
   margin-bottom: 1rem; /* Add some space between rows of logos */
 }
@@ -80,10 +82,6 @@
   .textHome,
   .textProjects {
     font-size: 1.1rem;
-  }
-
-  .projectsGrid {
-    max-width: 800px;
   }
 
   .projectCard {
@@ -107,10 +105,6 @@
     width: 95vw;
   }
 
-  .projectsGrid {
-    max-width: 600px;
-  }
-
   .projectCard {
     max-width: 175px;
   }
@@ -126,10 +120,6 @@
     font-size: 0.9rem;
   }
 
-  .projectsGrid {
-    max-width: 400px;
-  }
-
   .projectCard {
     max-width: 150px;
   }
@@ -143,11 +133,6 @@
   .textHome,
   .textProjects {
     font-size: 0.8rem;
-  }
-
-  .projectsGrid {
-    max-width: 300px; /* Adjust grid width */
-    gap: 0.8rem; /* Reduce gap between logos */
   }
 
   .projectCard {

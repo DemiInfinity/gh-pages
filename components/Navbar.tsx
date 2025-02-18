@@ -1,4 +1,3 @@
-// Navbar.tsx
 'use client'
 import { Socials, Logo } from "@/constans";
 import Image from "next/image";
@@ -6,24 +5,23 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { getBasePath } from "@/app/utils/basePath";
 import styles from './Navbar.module.css';
-import Navigation from './Navigation'; // Import your Navigation component
+import MobileNAV from "./MobileNav";
 
 const Navbar = () => {
   const basePath = getBasePath();
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
-
   return (
     <div className={styles.navbarContainer}>
       <div className={styles.navbarContent}>
-        <button className={styles.hamburger} onClick={toggleNav}>
+        {/* <button 
+          className='hamburger'
+          onClick={() => setIsNavOpen(prev => !prev)}
+        >
           <div className={styles.hamburgerLine}></div>
           <div className={styles.hamburgerLine}></div>
           <div className={styles.hamburgerLine}></div>
-        </button>
+        </button> */}
 
         {Logo.map((logo) => (
           <Link href={logo.link} key={logo.name}>
@@ -42,7 +40,7 @@ const Navbar = () => {
       </div>
 
       <div className={`${styles.navbarNavigation} ${isNavOpen ? styles.navOpen : ''}`}>
-        {isNavOpen && <Navigation />}
+        {isNavOpen && <MobileNAV />}
       </div>
 
       <div className={`${styles.navbarSocials} ${isNavOpen ? styles.navOpen : ''}`}>

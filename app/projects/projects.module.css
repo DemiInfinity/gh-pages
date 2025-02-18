@@ -7,7 +7,6 @@
   text-align: center;
   z-index: 2;
   padding: 10px;
-  overflow: hidden; /* Prevent scrolling */
 }
 
 .pageContainer {
@@ -23,8 +22,6 @@
   justify-content: center;
   justify-items: center;
   justify-self: center;
-  scrollbar-width: none;
-  overflow-y: hidden;
 }
 
 .projectsSection {

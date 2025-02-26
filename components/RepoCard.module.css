@@ -47,6 +47,7 @@
   align-items: center;
   padding: 16px;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 
 .card .front {
@@ -120,37 +121,59 @@
   margin: 5px 0;
 }
 
-/* Mobile-friendly adjustments */
-@media (max-width: 768px) {
+/* Media Queries */
+
+@media (max-width: 1281px) { /* Example breakpoint */
   .card {
-    width: 200px; /* Ensure cards fit within mobile view */
-    height: 200px; /* Ensures the card has a fixed height */
+    max-width: 400px; /* Smaller card */
+    max-height: 35%;
+    margin: 10px; /* Adjust margins */
   }
 
-  .cardInner {
-    padding: 10px;
+  .card img {
+    max-width: 100px;
   }
 
-  .card .front h3 {
+  .card h3 {
+    font-size: 1.1em;
+  }
+
+  .card .back {
+    font-size: 0.8rem;
+  }
+  
+}
+
+@media (max-width: 768px) { /* Example breakpoint for tablets and smaller */
+  .card img {
+    max-width: 70px;
+  }
+  
+  .card h3 {
     font-size: 1em;
+  }
+
+  .card .circleButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) { /* Example breakpoint for phones */
+  .card h3 {
+    font-size: 0.9em;
   }
 
   .card .circleButton {
     width: 30px;
     height: 30px;
-    font-size: 1.2em;
+    font-size: 1em;
+    bottom: 5px;
+    right: 5px;
   }
 
-  .card .front img {
-    max-height: 80px;
-  }
-
-  .card .front .icon {
-    font-size: 20px;
-  }
-
-  .card .back p {
-    margin: 3px 0;
-    font-size: 0.9em;
+  .card .front .noImageBackground {
+    height: 80px; /* Adjust no-image background height */
   }
 }

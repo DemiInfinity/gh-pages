@@ -1,6 +1,6 @@
-import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
+import { RxHome, RxPerson, RxDashboard, RxClipboard, RxIdCard } from "react-icons/rx";
 
-export const SkillData = [
+export const LanguagesData = [
   {
     name: "Html 5",
     Image: "/html.png",
@@ -20,16 +20,10 @@ export const SkillData = [
     height: 65,
   },
   {
-    name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
+    name: "SCSS",
+    Image: "/scss.png",
+    width: 60,
+    height: 60,
   },
   {
     name: "C-sharp",
@@ -38,26 +32,17 @@ export const SkillData = [
     height: 80,
   },
   {
-    name: "angular",
-    Image: "/angular.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    name: "ms SQL",
-    Image: "/sql-server.png",
-    width: 80,
-    height: 80,
-  },
-  // {
-  //   name: "Redux",
-  //   Image: "/redux.png",
-  //   width: 80,
-  //   height: 80,
-  // },
-  {
     name: "TypeScript",
     Image: "/ts.png",
+    width: 80,
+    height: 80,
+  },
+];
+
+export const FrameworkData = [
+  {
+    name: "angular",
+    Image: "/angular.png",
     width: 80,
     height: 80,
   },
@@ -67,21 +52,54 @@ export const SkillData = [
     width: 80,
     height: 80,
   },
-  // {
-  //   name: "Framer Motion",
-  //   Image: "/framer.png",
-  //   width: 80,
-  //   height: 80,
-  // },
-  // {
-  //   name: "Stripe Payment",
-  //   Image: "/stripe.webp",
-  //   width: 80,
-  //   height: 80,
-  // },
   {
     name: "Node js",
     Image: "/node-js.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    name: "Stencil js",
+    Image: "/stenciljs-icon.svg",
+    width: 80,
+    height: 80,
+  },
+  {
+    name: ".NEt Core",
+    Image: "/netCoreIcon.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    name: "Vite",
+    Image: "/ViteIcon.png",
+    width: 80,
+    height: 80,
+  },
+];
+
+export const ToolsData = [
+  {
+    name: "VS Code",
+    Image: "/VSCodeIcon.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    name: "VS",
+    Image: "/VSIcon.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    name: "AWS",
+    Image: "/AWSIcon.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    name: "ms SQL",
+    Image: "/sql-server.png",
     width: 80,
     height: 80,
   },
@@ -91,6 +109,19 @@ export const SkillData = [
     width: 40,
     height: 40,
   },
+  {
+    name: "Git",
+    Image: "/gitIcon.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    name: "Storybook",
+    Image: "/StorybookIcon.png",
+    width: 50,
+    height: 50,
+  },
+
 ];
 
 export const Socials = [
@@ -121,6 +152,14 @@ export const Socials = [
   },
 ];
 
+export const Logo = [
+  {
+    name: "Infinity",
+    src: "/DemiLogo.png",
+    link: "/",
+  },
+];
+
 export const NavLinks = [
   {
     name: "/",
@@ -128,13 +167,18 @@ export const NavLinks = [
     link: "/",
   },
   {
-    name: "/my-skills",
+    name: "/profile",
     icon: RxPerson,
-    link: "/my-skills",
+    link: "/profile",
   },
   {
-    name: "/my-projects",
+    name: "/skills",
+    icon: RxIdCard,
+    link: "/skills",
+  },
+  {
+    name: "/projects",
     icon: RxDashboard,
-    link: "/my-projects",
+    link: "/projects",
   },
 ];

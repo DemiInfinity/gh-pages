@@ -1,20 +1,24 @@
 .navContainer {
-  position: fixed;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 50;
-  width: 40%;
-  max-width: 400px;
-  height: auto;
+  position: absolute;
+  bottom: 40%;
+  left: 3.2%;
+  width: auto;
+  height: 40%;
+  max-height: 275px;
   padding: 15px 20px;
   background-color: #333333;
   border: 2px solid transparent;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
+  display: flexbox;
   justify-content: space-around;
   align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.navOpen {
+  transform: translateX(0); /* Show when open */
 }
 
 .navLink {
@@ -22,13 +26,14 @@
   transition: color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding-bottom: 30px;
   align-items: center;
 }
 
 .navIcon {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   color: inherit;
 }
 
@@ -45,22 +50,39 @@
   color: #9068db;
   transform: scale(1.2);
 }
+/* Media Queries */
 
-@media (max-width: 768px) {
+@media (max-width: 1012px) { /* Adjust breakpoint as needed */
   .navContainer {
-    width: 95%;
-    max-width: 600px;
-    bottom: 15px;
-    padding: 10px 15px;
-    border-radius: 10px;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Auto height */
+    max-height: none; /* Remove max-height restriction */
+    padding: 20px; /* Adjust padding */
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: center;
+    background-color: rgba(51, 51, 51, 1); /* Slightly transparent background */
+    border-radius: 0; /* Remove border-radius */
+    box-shadow: none; /* Remove box-shadow */
+    z-index: 99;
+    display: none;
+  }
+
+  .navLink {
+    flex-direction: column; /* Stack icon and label vertically */
+    padding: 0; /* Remove padding */
+    margin: 0 10px; /* Add spacing between links */
   }
 
   .navIcon {
-    width: 25px;
-    height: 25px;
+    margin-bottom: 5px;
   }
+}
 
-  .navLabel {
-    font-size: 10px;
-  }
+@media (max-width: 480px) {
+    .navLink {
+        margin: 0 5px; /* Further reduce spacing on very small screens */
+    }
 }

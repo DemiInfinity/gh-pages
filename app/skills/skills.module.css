@@ -1,0 +1,158 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  z-index: 2;
+  padding: 10px;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85vw; /* Full width */
+  height: 85vh;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.title {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 2.5rem;
+  padding: 20px 0;
+}
+
+.gradientText {
+  background: linear-gradient(to right, #00ffff, #8e44ad);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.aboutText {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  text-align: center;
+  word-wrap: break-word; /* Ensure long words break properly */
+  overflow-wrap: break-word; /* Break long words */
+  white-space: normal; /* Ensure text wraps properly */
+  max-width: 900px; /* Set a max-width to limit the text's width */
+  padding-bottom: 1.5rem;
+}
+
+.swiperContainer {
+  width: 1000px;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* Media Queries */
+
+@media (max-width: 1920px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .aboutText {
+    font-size: 1.1rem;
+  }
+
+  .swiperContainer {
+    width: 800px; /* Adjust swiper width */
+  }
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.7rem;
+  }
+
+  .pageContainer {
+    left: 0;
+    height: 80vh;
+    width: 95vw;
+  }
+
+  .aboutText {
+    font-size: 1rem;
+  }
+
+  .swiperContainer {
+    width: 600px; /* Adjust swiper width */
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .aboutText {
+    font-size: 0.9rem;
+  }
+
+  .aboutSection {
+    padding: 3rem 1rem;
+  }
+
+  .swiperContainer {
+    width: 400px; /* Adjust swiper width */
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .aboutText {
+    font-size: 0.8rem;
+  }
+
+  .aboutSection {
+    padding: 2rem 0.5rem;
+  }
+
+  .swiperContainer {
+    width: 300px; /* Adjust swiper width */
+  }
+}

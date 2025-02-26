@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
-  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  font-family: roboto;
 }
 
 /* Common styles */
@@ -16,31 +19,28 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
-.backgroundImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.background {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
 }
 
-.overlay {
+.triangle {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+}
+
+.triangle.purple {
+  background-color: #5c10b6;
+  clip-path: polygon(0, 90% 0, 0 100%);
+}
+
+.triangle.black {
+  background-color: black;
+  clip-path: polygon(100% -15%, 100% 100%, 15% 100%);
 }
 
 .title,
@@ -56,58 +56,59 @@ body {
   color: transparent;
 }
 
-.subtitle,
-.description {
-  color: #b0b0b0;
-  font-size: 1.25rem; /* Default size */
-}
-
-.button {
-  border-radius: 20px;
-  position: relative;
-  padding: 15px;
-  font-size: 1.125rem; /* Default size */
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-}
-
-.button.bg-blue-500 {
-  background-color: #9068db;
-}
-
-.button.bg-blue-500:hover {
-  background-color: #b19cd9;
-}
-
-.button.bg-transparent {
-  background-color: transparent;
-  border: 2.5px solid #ffffff;
+.panel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 }
 
 .button.bg-transparent:hover {
   background-color: #b19cd9;
 }
 
-/* Mobile-friendly adjustments */
-@media (max-width: 768px) {
-  .pageContainer,
-  .mainContainer {
-    padding: 20px;
+/* Media Queries */
+
+@media (max-width: 1920px) { /* Example: Adjust for standard HD screens */
+  .title, .heading {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1280px) { /* Example: Smaller laptops/tablets */
+  .title, .heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) { /* Example: Tablets and smaller */
+  .title, .heading {
+    font-size: 1.75rem;
   }
 
-  .title,
-  .heading {
-    font-size: 1.75rem; /* Adjusted size */
+  /* Example: Adjust triangle clip-path for better mobile view if needed */
+  .triangle.purple {
+    clip-path: polygon(0, 85% 0, 0 100%); /* Slightly adjusted */
   }
 
-  .subtitle,
-  .description {
-    font-size: 1rem; /* Adjusted size */
+  .triangle.black {
+    clip-path: polygon(100% -10%, 100% 100%, 10% 100%); /* Slightly adjusted */
+  }
+}
+
+@media (max-width: 480px) { /* Example: Phones */
+  .title, .heading {
+    font-size: 1.5rem;
   }
 
-  .button {
-    font-size: 1rem; /* Adjusted size */
-    padding: 10px; /* Adjusted padding */
+  /* Further triangle adjustments for very small screens */
+  .triangle.purple {
+    clip-path: polygon(0, 80% 0, 0 100%);
+  }
+
+  .triangle.black {
+    clip-path: polygon(100% -5%, 100% 100%, 5% 100%);
   }
 }

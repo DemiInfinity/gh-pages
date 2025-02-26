@@ -1,4 +1,5 @@
 .textContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -8,24 +9,20 @@
   padding: 20px;
 }
 
-.buttonGroup {
-  display: none;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: center;
-}
-
-.buttonGroup.md\:flex {
+.pageContainer {
   display: flex;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85vw; /* Full width */
+  height: 85vh;
+  top: 35px;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
 }
 
 .textHome {
@@ -65,7 +62,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-basis: 100%; /* Make sure each project takes up full width on small screens */
+  width: 100%;
   max-width: 250px; /* Limit max width of logos on smaller screens */
   margin-bottom: 1rem; /* Add some space between rows of logos */
 }
@@ -77,42 +76,70 @@
   max-width: 150px; /* Maintain maximum width */
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
-  .textContainer {
-    max-width: 90%;
-    padding: 10px;
-  }
+/* Media Queries */
 
-  .buttonGroup {
-    display: flex;
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    gap: 15px;
-  }
-
-  .projectsGrid {
-    gap: 1rem; /* Reduce the gap between project logos */
-    margin-top: 5px;
+@media (max-width: 1920px) {
+  .textHome,
+  .textProjects {
+    font-size: 1.1rem;
   }
 
   .projectCard {
-    flex-basis: 50%; /* Ensure full-width for logos on mobile */
-    max-width: 100px; /* Ensure logos don’t take too much space */
+    max-width: 200px;
   }
 
-  .textHome {
-    font-size: 1rem; /* Adjust text size for mobile */
-    padding: 0 10px; /* Add padding for better readability */
-    margin-top: -15px;
+  .projectLogo {
+    max-width: 120px;
   }
+}
 
+@media (max-width: 1280px) {
+  .textHome,
   .textProjects {
-    font-size: 1rem; /* Adjust text size for mobile */
+    font-size: 1rem;
   }
 
-  .title,
-  .heading {
-    font-size: 1.75rem; /* Adjusted size */
-    margin-top: -15px;
+  .pageContainer {
+    left: 0;
+    height: 80vh;
+    width: 95vw;
+  }
+
+  .projectCard {
+    max-width: 175px;
+  }
+
+  .projectLogo {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .textHome,
+  .textProjects {
+    font-size: 0.9rem;
+  }
+
+  .projectCard {
+    max-width: 150px;
+  }
+
+  .projectLogo {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textHome,
+  .textProjects {
+    font-size: 0.8rem;
+  }
+
+  .projectCard {
+    max-width: 125px; /* Adjust card width */
+  }
+
+  .projectLogo {
+    max-width: 60px; /* Adjust logo width */
   }
 }

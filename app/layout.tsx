@@ -3,8 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title:
@@ -20,10 +22,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <header>
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
+      </header>
       <body className={inter.className}>
         <Navbar />
-        {children}
+        <div className="background">
+          <div className="triangle purple"></div>
+          <div className="triangle black"></div>
+          <div className="panel">{children}</div>
+        </div>
         <Navigation />
+        <Footer />
       </body>
     </html>
   );

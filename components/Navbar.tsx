@@ -1,23 +1,49 @@
-import { Socials } from "@/constans";
+'use client'
+import { Socials, Logo } from "@/constans";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { getBasePath } from "@/app/utils/basePath";
+import styles from './Navbar.module.css';
+import MobileNAV from "./MobileNav";
 
 const Navbar = () => {
   const basePath = getBasePath();
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 z-[40] w-full h-[100px] bg-transparent flex justify-between items-center px-10 md:px-20">
-      <div className="flex flex-row gap-3 items-center">
-        <Link href="/">
-          <h1 className="text-white text-[25px] font-semibold">
-            Demi Taylor Nimmo
-          </h1>
-        </Link>
+    <div className={styles.navbarContainer}>
+      <div className={styles.navbarContent}>
+        {/* <button 
+          className='hamburger'
+          onClick={() => setIsNavOpen(prev => !prev)}
+        >
+          <div className={styles.hamburgerLine}></div>
+          <div className={styles.hamburgerLine}></div>
+          <div className={styles.hamburgerLine}></div>
+        </button> */}
+
+        {Logo.map((logo) => (
+          <Link href={logo.link} key={logo.name}>
+            <Image
+              key={logo.name}
+              src={basePath + logo.src}
+              alt={logo.name}
+              width={100}
+              height={100}
+            />
+          </Link>
+        ))}
+        <h1 className={styles.siteTitle}>
+          Demi Taylor Nimmo
+        </h1>
       </div>
 
-      <div className="flex flex-row gap-5 mb-2">
+      <div className={`${styles.navbarNavigation} ${isNavOpen ? styles.navOpen : ''}`}>
+        {isNavOpen && <MobileNAV />}
+      </div>
+
+      <div className={`${styles.navbarSocials} ${isNavOpen ? styles.navOpen : ''}`}>
         {Socials.map((social) => (
           <Link href={social.link} key={social.name}>
             <Image
